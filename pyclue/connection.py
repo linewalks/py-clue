@@ -28,4 +28,4 @@ class Connection:
 
     if not token.access_token:
       raise ConnectionRefusedError("Invalid username or password.")
-    # self.auth.set_token(token.access_token)
+    self.auth.set_token(token.access_token)
