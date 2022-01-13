@@ -15,6 +15,9 @@ class AuthInterceptor(
     StreamUnaryClientInterceptor,
     StreamStreamClientInterceptor
 ):
+  def __init__(self):
+    self.token = None
+
   def set_token(self, token):
     self.token = token
 
@@ -24,7 +27,8 @@ class AuthInterceptor(
     else:
       metadata = list(client_call_details.metadata)
 
-    metadata.append(("access_token", self.token))
+    if self.token is not None:
+      metadata.append(("access_token", self.token))
 
     client_call_details = self._update_client_call_details_metadata(
         client_call_details,
