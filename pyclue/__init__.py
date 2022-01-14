@@ -1,6 +1,4 @@
-
 from pyclue.connection import Connection
-from pyclue.interceptors import AuthInterceptor
 
 
 class CLUE:

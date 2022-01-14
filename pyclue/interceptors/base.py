@@ -57,10 +57,3 @@ class BaseInterceptor:
     )
 
     return client_call_details
-
-
-
-  
-
-
-  
