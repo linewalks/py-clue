@@ -2,10 +2,12 @@ from grpc import insecure_channel, intercept_channel
 
 from clue_pb2 import RequestLogin
 from clue_pb2_grpc import CLUEStub
+
+from pyclue.features import FeatureAdapter
 from pyclue.interceptors import AuthInterceptor
 
 
-class Connection:
+class Connection(FeatureAdapter):
   def __init__(self, host, port, username, password):
     self.username = username
     self.password = password
