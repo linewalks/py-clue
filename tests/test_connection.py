@@ -3,6 +3,7 @@ import pytest
 from pyclue import CLUE
 
 
+@pytest.mark.first
 class TestConnection:
   def test_no_server(self):
     with pytest.raises(ConnectionError):

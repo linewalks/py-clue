@@ -38,3 +38,8 @@ def clue(clue_host, clue_port, clue_username, clue_password):
       clue_username,
       clue_password
   )
+
+
+@pytest.fixture(scope="class")
+def conn(clue):
+  yield clue.connect()
