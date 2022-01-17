@@ -1,6 +1,3 @@
-import asyncio
-import time
-
 from collections import deque
 from threading import Event, Condition
 
@@ -46,7 +43,6 @@ class Stream:
   @convert()
   def fetchone(self):
     self._add_fetch_num(1)
-    time.sleep(0.3)
     return next(self._result)
 
   @convert()
