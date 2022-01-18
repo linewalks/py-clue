@@ -1,8 +1,10 @@
 from clue_pb2 import (
-    RequestCohortList
+    RequestCohortList,
+    RequestCohortStream
 )
 
-from .converter import convert
+from pyclue.converter import convert
+from pyclue.stream import Stream
 
 
 class CohortFeatures:
@@ -15,3 +17,10 @@ class CohortFeatures:
     )).cohort_list
 
     return cohort_list
+
+  def get_cohort_person_table(self, cohort_id):
+    return Stream(
+        self.stub.GetCohortPersonTable,
+        RequestCohortStream,
+        cohort_id=cohort_id
+    )

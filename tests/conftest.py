@@ -8,6 +8,7 @@ def pytest_addoption(parser):
   parser.addini("clue_port", "clue port", default="9999")
   parser.addini("clue_username", "clue username")
   parser.addini("clue_password", "clue password")
+  parser.addini("test_cohort_id", "test cohort id")
 
 
 @pytest.fixture(scope="session")
@@ -43,3 +44,8 @@ def clue(clue_host, clue_port, clue_username, clue_password):
 @pytest.fixture(scope="class")
 def conn(clue):
   yield clue.connect()
+
+
+@pytest.fixture(scope="session")
+def test_cohort_id(request):
+  return int(request.config.getini("test_cohort_id"))
