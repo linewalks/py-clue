@@ -8,6 +8,9 @@ from pyclue.interceptors import AuthInterceptor
 
 
 class Connection(FeatureAdapter):
+  """
+  Connection object that handles all feature calls.
+  """
   def __init__(self, host, port, username, password):
     self.username = username
     self.password = password

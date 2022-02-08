@@ -7,11 +7,22 @@ Welcome to pyclue's documentation!
 ==================================
 
 .. toctree::
+   :caption: Getting Started
    :maxdepth: 2
 
-   pyclue
-   pyclue.stream
-   pyclue.connection
+   introduction
+   installation
+   tutorial
+
+
+.. toctree::
+   :caption: Reference
+   :maxdepth: 2
+
+   clue
+   connection
+   stream
+
 
 
 Indices and tables
