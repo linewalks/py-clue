@@ -1,4 +1,5 @@
 from collections import Iterable
+from functools import wraps
 from google.protobuf.message import Message
 
 
@@ -30,6 +31,7 @@ def convert():
   @convert("dict", "df") 등등
   """
   def decorator(func):
+    @wraps(func)
     def wrapper(*args, **kwargs):
       return convert_message_to_dict(func(*args, **kwargs))
     return wrapper

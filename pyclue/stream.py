@@ -5,6 +5,9 @@ from pyclue.converter import convert
 
 
 class Stream:
+  """
+  Controlls data stream.
+  """
   def __init__(self, func, request_type, **kwargs):
     self._stop_event = Event()
     self._request_condition = Condition()
@@ -42,15 +45,28 @@ class Stream:
 
   @convert()
   def fetchone(self):
+    """
+    Fetch one response.
+    """
     self._add_fetch_num(1)
     return next(self._result)
 
   @convert()
   def fetchmany(self, num):
+    """
+    Fetch multiple responses.
+
+    :param int num:
+      Number of responses to fetch.
+    """
     self._add_fetch_num(num)
     return [next(self._result) for _ in range(num)]
 
   def close(self):
+    """
+    Close stream.
+    Cll when no longer uses the stream.
+    """
     self._stop_event.set()
     with self._request_condition:
       self._request_condition.notify()
