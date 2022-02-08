@@ -31,8 +31,7 @@ release = "v0.1.0"
 extensions = [
     "sphinx.ext.todo",
     "sphinx.ext.viewcode",
-    "sphinx.ext.autodoc",
-    "myst_parser"
+    "sphinx.ext.autodoc"
 ]
 
 # Add any paths that contain templates here, relative to this directory.
