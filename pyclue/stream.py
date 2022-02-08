@@ -60,7 +60,20 @@ class Stream:
       Number of responses to fetch.
     """
     self._add_fetch_num(num)
-    return [next(self._result) for _ in range(num)]
+
+    result = []
+    for _ in range(num):
+      try:
+        result.append(next(self._result))
+      except StopIteration:
+        # when length of result is less then num
+        break
+    return result
+
+  @convert()
+  def fetchall(self):
+    self._add_fetch_num(0)
+    return [each for each in self._result]
 
   def close(self):
     """
