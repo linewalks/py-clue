@@ -24,6 +24,10 @@ class TestCohortPersonTable:
     assert isinstance(obj_list, list)
     assert len(obj_list) <= num
 
+  def test_fetchall(self, result):
+    obj_list = result.fetchall()
+    assert isinstance(obj_list, list)
+
   def test_multiple(self, result):
     assert result.fetchone()
     assert result.fetchone()
