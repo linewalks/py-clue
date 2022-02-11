@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\nclue.proto\"/\n\x0cRequestLogin\x12\r\n\x05\x65mail\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"<\n\rResponseLogin\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x15\n\rrefresh_token\x18\x02 \x01(\t\"?\n\x11RequestCohortList\x12\x0c\n\x04term\x18\x01 \x01(\t\x12\x0c\n\x04page\x18\x02 \x01(\x05\x12\x0e\n\x06length\x18\x03 \x01(\x05\"&\n\nCohortInfo\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\"6\n\x12ResponseCohortList\x12 \n\x0b\x63ohort_list\x18\x01 \x03(\x0b\x32\x0b.CohortInfo\";\n\x13RequestCohortStream\x12\x11\n\tfetch_num\x18\x01 \x01(\x05\x12\x11\n\tcohort_id\x18\x02 \x01(\x05\"\xd2\x03\n\nPersonInfo\x12\x11\n\tperson_id\x18\x01 \x01(\x05\x12\x19\n\x11gender_concept_id\x18\x02 \x01(\x05\x12\x15\n\ryear_of_birth\x18\x03 \x01(\x05\x12\x16\n\x0emonth_of_birth\x18\x04 \x01(\x05\x12\x14\n\x0c\x64\x61y_of_birth\x18\x05 \x01(\x05\x12\x17\n\x0frace_concept_id\x18\x06 \x01(\x05\x12\x1c\n\x14\x65thnicity_concept_id\x18\x07 \x01(\x05\x12\x13\n\x0blocation_id\x18\x08 \x01(\x05\x12\x13\n\x0bprovider_id\x18\t \x01(\x05\x12\x14\n\x0c\x63\x61re_site_id\x18\n \x01(\x05\x12\x1b\n\x13person_source_value\x18\x0b \x01(\t\x12\x1b\n\x13gender_source_value\x18\x0c \x01(\t\x12 \n\x18gender_source_concept_id\x18\r \x01(\x05\x12\x19\n\x11race_source_value\x18\x0e \x01(\t\x12\x1e\n\x16race_source_concept_id\x18\x0f \x01(\x05\x12\x1e\n\x16\x65thnicity_source_value\x18\x10 \x01(\t\x12#\n\x1b\x65thnicity_source_concept_id\x18\x11 \x01(\x05\x32\xb1\x01\n\x04\x43LUE\x12,\n\tAuthLogin\x12\r.RequestLogin\x1a\x0e.ResponseLogin\"\x00\x12:\n\rGetCohortList\x12\x12.RequestCohortList\x1a\x13.ResponseCohortList\"\x00\x12?\n\x14GetCohortPersonTable\x12\x14.RequestCohortStream\x1a\x0b.PersonInfo\"\x00(\x01\x30\x01\x62\x06proto3'
+  serialized_pb=b'\n\nclue.proto\"/\n\x0cRequestLogin\x12\r\n\x05\x65mail\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"<\n\rResponseLogin\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x15\n\rrefresh_token\x18\x02 \x01(\t\"?\n\x11RequestCohortList\x12\x0c\n\x04term\x18\x01 \x01(\t\x12\x0c\n\x04page\x18\x02 \x01(\x05\x12\x0e\n\x06length\x18\x03 \x01(\x05\"\x86\x01\n\nCohortInfo\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x16\n\x0egenerated_time\x18\x03 \x01(\t\x12\x14\n\x0cperson_count\x18\x04 \x01(\x05\x12\x0c\n\x04\x64one\x18\x05 \x01(\t\x12\x13\n\x0bupdate_flag\x18\x06 \x01(\x05\x12\r\n\x05state\x18\x07 \x01(\x05\"6\n\x12ResponseCohortList\x12 \n\x0b\x63ohort_list\x18\x01 \x03(\x0b\x32\x0b.CohortInfo\";\n\x13RequestCohortStream\x12\x11\n\tfetch_num\x18\x01 \x01(\x05\x12\x11\n\tcohort_id\x18\x02 \x01(\x05\"\xd2\x03\n\nPersonInfo\x12\x11\n\tperson_id\x18\x01 \x01(\x05\x12\x19\n\x11gender_concept_id\x18\x02 \x01(\x05\x12\x15\n\ryear_of_birth\x18\x03 \x01(\x05\x12\x16\n\x0emonth_of_birth\x18\x04 \x01(\x05\x12\x14\n\x0c\x64\x61y_of_birth\x18\x05 \x01(\x05\x12\x17\n\x0frace_concept_id\x18\x06 \x01(\x05\x12\x1c\n\x14\x65thnicity_concept_id\x18\x07 \x01(\x05\x12\x13\n\x0blocation_id\x18\x08 \x01(\x05\x12\x13\n\x0bprovider_id\x18\t \x01(\x05\x12\x14\n\x0c\x63\x61re_site_id\x18\n \x01(\x05\x12\x1b\n\x13person_source_value\x18\x0b \x01(\t\x12\x1b\n\x13gender_source_value\x18\x0c \x01(\t\x12 \n\x18gender_source_concept_id\x18\r \x01(\x05\x12\x19\n\x11race_source_value\x18\x0e \x01(\t\x12\x1e\n\x16race_source_concept_id\x18\x0f \x01(\x05\x12\x1e\n\x16\x65thnicity_source_value\x18\x10 \x01(\t\x12#\n\x1b\x65thnicity_source_concept_id\x18\x11 \x01(\x05\x32\xb1\x01\n\x04\x43LUE\x12,\n\tAuthLogin\x12\r.RequestLogin\x1a\x0e.ResponseLogin\"\x00\x12:\n\rGetCohortList\x12\x12.RequestCohortList\x1a\x13.ResponseCohortList\"\x00\x12?\n\x14GetCohortPersonTable\x12\x14.RequestCohortStream\x1a\x0b.PersonInfo\"\x00(\x01\x30\x01\x62\x06proto3'
 )
 
 
@@ -171,6 +171,41 @@ _COHORTINFO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='generated_time', full_name='CohortInfo.generated_time', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='person_count', full_name='CohortInfo.person_count', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='done', full_name='CohortInfo.done', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='update_flag', full_name='CohortInfo.update_flag', index=5,
+      number=6, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='state', full_name='CohortInfo.state', index=6,
+      number=7, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -183,8 +218,8 @@ _COHORTINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=190,
-  serialized_end=228,
+  serialized_start=191,
+  serialized_end=325,
 )
 
 
@@ -215,8 +250,8 @@ _RESPONSECOHORTLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=230,
-  serialized_end=284,
+  serialized_start=327,
+  serialized_end=381,
 )
 
 
@@ -254,8 +289,8 @@ _REQUESTCOHORTSTREAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=286,
-  serialized_end=345,
+  serialized_start=383,
+  serialized_end=442,
 )
 
 
@@ -398,8 +433,8 @@ _PERSONINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=348,
-  serialized_end=814,
+  serialized_start=445,
+  serialized_end=911,
 )
 
 _RESPONSECOHORTLIST.fields_by_name['cohort_list'].message_type = _COHORTINFO
@@ -470,8 +505,8 @@ _CLUE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=817,
-  serialized_end=994,
+  serialized_start=914,
+  serialized_end=1091,
   methods=[
   _descriptor.MethodDescriptor(
     name='AuthLogin',
