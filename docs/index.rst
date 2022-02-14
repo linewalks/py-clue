@@ -14,7 +14,6 @@ Welcome to pyclue's documentation!
    installation
    tutorial
 
-
 .. toctree::
    :caption: Reference
    :maxdepth: 2
