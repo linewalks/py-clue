@@ -3,4 +3,4 @@ Installation
 
 .. code-block::
 
-  pip install py-clue
+  pip install python-clue
