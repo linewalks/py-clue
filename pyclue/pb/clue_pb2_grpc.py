@@ -29,6 +29,51 @@ class CLUEStub(object):
                 request_serializer=clue__pb2.RequestCohortStream.SerializeToString,
                 response_deserializer=clue__pb2.PersonInfo.FromString,
                 )
+        self.GetCohortConditionOccurrenceTable = channel.stream_stream(
+                '/CLUE/GetCohortConditionOccurrenceTable',
+                request_serializer=clue__pb2.RequestCohortStream.SerializeToString,
+                response_deserializer=clue__pb2.ConditionOccurrenceInfo.FromString,
+                )
+        self.GetCohortDeathTable = channel.stream_stream(
+                '/CLUE/GetCohortDeathTable',
+                request_serializer=clue__pb2.RequestCohortStream.SerializeToString,
+                response_deserializer=clue__pb2.DeathInfo.FromString,
+                )
+        self.GetCohortDeviceExposureTable = channel.stream_stream(
+                '/CLUE/GetCohortDeviceExposureTable',
+                request_serializer=clue__pb2.RequestCohortStream.SerializeToString,
+                response_deserializer=clue__pb2.DeviceExposureInfo.FromString,
+                )
+        self.GetCohortDrugExposureTable = channel.stream_stream(
+                '/CLUE/GetCohortDrugExposureTable',
+                request_serializer=clue__pb2.RequestCohortStream.SerializeToString,
+                response_deserializer=clue__pb2.DrugExposureInfo.FromString,
+                )
+        self.GetCohortMeasurementTable = channel.stream_stream(
+                '/CLUE/GetCohortMeasurementTable',
+                request_serializer=clue__pb2.RequestCohortStream.SerializeToString,
+                response_deserializer=clue__pb2.MeasurementInfo.FromString,
+                )
+        self.GetCohortObservationPeriodTable = channel.stream_stream(
+                '/CLUE/GetCohortObservationPeriodTable',
+                request_serializer=clue__pb2.RequestCohortStream.SerializeToString,
+                response_deserializer=clue__pb2.ObservationPeriodInfo.FromString,
+                )
+        self.GetCohortObservationTable = channel.stream_stream(
+                '/CLUE/GetCohortObservationTable',
+                request_serializer=clue__pb2.RequestCohortStream.SerializeToString,
+                response_deserializer=clue__pb2.ObservationInfo.FromString,
+                )
+        self.GetCohortProcedureOccurrenceTable = channel.stream_stream(
+                '/CLUE/GetCohortProcedureOccurrenceTable',
+                request_serializer=clue__pb2.RequestCohortStream.SerializeToString,
+                response_deserializer=clue__pb2.ProcedureOccurrenceInfo.FromString,
+                )
+        self.GetCohortVisitOccurrenceTable = channel.stream_stream(
+                '/CLUE/GetCohortVisitOccurrenceTable',
+                request_serializer=clue__pb2.RequestCohortStream.SerializeToString,
+                response_deserializer=clue__pb2.VisitOccurrenceInfo.FromString,
+                )
 
 
 class CLUEServicer(object):
@@ -52,6 +97,60 @@ class CLUEServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def GetCohortConditionOccurrenceTable(self, request_iterator, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetCohortDeathTable(self, request_iterator, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetCohortDeviceExposureTable(self, request_iterator, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetCohortDrugExposureTable(self, request_iterator, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetCohortMeasurementTable(self, request_iterator, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetCohortObservationPeriodTable(self, request_iterator, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetCohortObservationTable(self, request_iterator, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetCohortProcedureOccurrenceTable(self, request_iterator, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetCohortVisitOccurrenceTable(self, request_iterator, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_CLUEServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -69,6 +168,51 @@ def add_CLUEServicer_to_server(servicer, server):
                     servicer.GetCohortPersonTable,
                     request_deserializer=clue__pb2.RequestCohortStream.FromString,
                     response_serializer=clue__pb2.PersonInfo.SerializeToString,
+            ),
+            'GetCohortConditionOccurrenceTable': grpc.stream_stream_rpc_method_handler(
+                    servicer.GetCohortConditionOccurrenceTable,
+                    request_deserializer=clue__pb2.RequestCohortStream.FromString,
+                    response_serializer=clue__pb2.ConditionOccurrenceInfo.SerializeToString,
+            ),
+            'GetCohortDeathTable': grpc.stream_stream_rpc_method_handler(
+                    servicer.GetCohortDeathTable,
+                    request_deserializer=clue__pb2.RequestCohortStream.FromString,
+                    response_serializer=clue__pb2.DeathInfo.SerializeToString,
+            ),
+            'GetCohortDeviceExposureTable': grpc.stream_stream_rpc_method_handler(
+                    servicer.GetCohortDeviceExposureTable,
+                    request_deserializer=clue__pb2.RequestCohortStream.FromString,
+                    response_serializer=clue__pb2.DeviceExposureInfo.SerializeToString,
+            ),
+            'GetCohortDrugExposureTable': grpc.stream_stream_rpc_method_handler(
+                    servicer.GetCohortDrugExposureTable,
+                    request_deserializer=clue__pb2.RequestCohortStream.FromString,
+                    response_serializer=clue__pb2.DrugExposureInfo.SerializeToString,
+            ),
+            'GetCohortMeasurementTable': grpc.stream_stream_rpc_method_handler(
+                    servicer.GetCohortMeasurementTable,
+                    request_deserializer=clue__pb2.RequestCohortStream.FromString,
+                    response_serializer=clue__pb2.MeasurementInfo.SerializeToString,
+            ),
+            'GetCohortObservationPeriodTable': grpc.stream_stream_rpc_method_handler(
+                    servicer.GetCohortObservationPeriodTable,
+                    request_deserializer=clue__pb2.RequestCohortStream.FromString,
+                    response_serializer=clue__pb2.ObservationPeriodInfo.SerializeToString,
+            ),
+            'GetCohortObservationTable': grpc.stream_stream_rpc_method_handler(
+                    servicer.GetCohortObservationTable,
+                    request_deserializer=clue__pb2.RequestCohortStream.FromString,
+                    response_serializer=clue__pb2.ObservationInfo.SerializeToString,
+            ),
+            'GetCohortProcedureOccurrenceTable': grpc.stream_stream_rpc_method_handler(
+                    servicer.GetCohortProcedureOccurrenceTable,
+                    request_deserializer=clue__pb2.RequestCohortStream.FromString,
+                    response_serializer=clue__pb2.ProcedureOccurrenceInfo.SerializeToString,
+            ),
+            'GetCohortVisitOccurrenceTable': grpc.stream_stream_rpc_method_handler(
+                    servicer.GetCohortVisitOccurrenceTable,
+                    request_deserializer=clue__pb2.RequestCohortStream.FromString,
+                    response_serializer=clue__pb2.VisitOccurrenceInfo.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -128,5 +272,158 @@ class CLUE(object):
         return grpc.experimental.stream_stream(request_iterator, target, '/CLUE/GetCohortPersonTable',
             clue__pb2.RequestCohortStream.SerializeToString,
             clue__pb2.PersonInfo.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetCohortConditionOccurrenceTable(request_iterator,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.stream_stream(request_iterator, target, '/CLUE/GetCohortConditionOccurrenceTable',
+            clue__pb2.RequestCohortStream.SerializeToString,
+            clue__pb2.ConditionOccurrenceInfo.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetCohortDeathTable(request_iterator,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.stream_stream(request_iterator, target, '/CLUE/GetCohortDeathTable',
+            clue__pb2.RequestCohortStream.SerializeToString,
+            clue__pb2.DeathInfo.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetCohortDeviceExposureTable(request_iterator,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.stream_stream(request_iterator, target, '/CLUE/GetCohortDeviceExposureTable',
+            clue__pb2.RequestCohortStream.SerializeToString,
+            clue__pb2.DeviceExposureInfo.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetCohortDrugExposureTable(request_iterator,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.stream_stream(request_iterator, target, '/CLUE/GetCohortDrugExposureTable',
+            clue__pb2.RequestCohortStream.SerializeToString,
+            clue__pb2.DrugExposureInfo.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetCohortMeasurementTable(request_iterator,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.stream_stream(request_iterator, target, '/CLUE/GetCohortMeasurementTable',
+            clue__pb2.RequestCohortStream.SerializeToString,
+            clue__pb2.MeasurementInfo.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetCohortObservationPeriodTable(request_iterator,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.stream_stream(request_iterator, target, '/CLUE/GetCohortObservationPeriodTable',
+            clue__pb2.RequestCohortStream.SerializeToString,
+            clue__pb2.ObservationPeriodInfo.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetCohortObservationTable(request_iterator,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.stream_stream(request_iterator, target, '/CLUE/GetCohortObservationTable',
+            clue__pb2.RequestCohortStream.SerializeToString,
+            clue__pb2.ObservationInfo.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetCohortProcedureOccurrenceTable(request_iterator,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.stream_stream(request_iterator, target, '/CLUE/GetCohortProcedureOccurrenceTable',
+            clue__pb2.RequestCohortStream.SerializeToString,
+            clue__pb2.ProcedureOccurrenceInfo.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetCohortVisitOccurrenceTable(request_iterator,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.stream_stream(request_iterator, target, '/CLUE/GetCohortVisitOccurrenceTable',
+            clue__pb2.RequestCohortStream.SerializeToString,
+            clue__pb2.VisitOccurrenceInfo.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

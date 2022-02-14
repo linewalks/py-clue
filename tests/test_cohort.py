@@ -7,7 +7,6 @@ class TestCohort:
 
 
 class TestCohortPersonTable:
-
   @pytest.fixture(scope="function")
   def result(self, conn, test_cohort_id):
     stream = conn.get_cohort_person_table(test_cohort_id)
@@ -32,3 +31,26 @@ class TestCohortPersonTable:
     assert result.fetchone()
     assert result.fetchone()
     assert result.fetchmany(2)
+
+
+class TestCohortTables:
+  @pytest.mark.parametrize(
+      "table_name",
+      [
+          "condition_occurrence",
+          "death",
+          "device_exposure",
+          "drug_exposure",
+          "measurement",
+          "observation_period",
+          "observation",
+          "procedure_occurrence",
+          "visit_occurrence"
+      ]
+  )
+  def test_fetchone(self, conn, test_cohort_id, table_name):
+    func = getattr(conn, f"get_cohort_{table_name}_table")
+    stream = func(test_cohort_id)
+    obj = stream.fetchone()
+    assert "person_id" in obj
+    stream.close()
