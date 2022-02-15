@@ -29,7 +29,6 @@ class CohortFeatures:
     :return: List of cohorts.
     :rtype: List of dictionaries.
     """
-    print("Get Cohort List")
     cohort_list = self.stub.GetCohortList(RequestCohortList(
         term=term,
         page=page,
