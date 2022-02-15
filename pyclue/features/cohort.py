@@ -53,3 +53,173 @@ class CohortFeatures:
         RequestCohortStream,
         cohort_id=cohort_id
     )
+
+  def get_cohort_person_table(self, cohort_id: int) -> Stream:
+    """
+    Get person table of a cohort.
+    Data stream connection will be opened.
+
+    :param int cohort_id:
+      ID of the cohort.
+
+    :return: Stream object.
+    :rtype: Stream
+    """
+    return Stream(
+        self.stub.GetCohortPersonTable,
+        RequestCohortStream,
+        cohort_id=cohort_id
+    )
+
+  def get_cohort_condition_occurrence_table(self, cohort_id: int) -> Stream:
+    """
+    Get condition_occurrence table of a cohort.
+    Data stream connection will be opened.
+
+    :param int cohort_id:
+      ID of the cohort.
+
+    :return: Stream object.
+    :rtype: Stream
+    """
+    return Stream(
+        self.stub.GetCohortConditionOccurrenceTable,
+        RequestCohortStream,
+        cohort_id=cohort_id
+    )
+
+  def get_cohort_death_table(self, cohort_id: int) -> Stream:
+    """
+    Get death table of a cohort.
+    Data stream connection will be opened.
+
+    :param int cohort_id:
+      ID of the cohort.
+
+    :return: Stream object.
+    :rtype: Stream
+    """
+    return Stream(
+        self.stub.GetCohortDeathTable,
+        RequestCohortStream,
+        cohort_id=cohort_id
+    )
+
+  def get_cohort_device_exposure_table(self, cohort_id: int) -> Stream:
+    """
+    Get device_exposure table of a cohort.
+    Data stream connection will be opened.
+
+    :param int cohort_id:
+      ID of the cohort.
+
+    :return: Stream object.
+    :rtype: Stream
+    """
+    return Stream(
+        self.stub.GetCohortDeviceExposureTable,
+        RequestCohortStream,
+        cohort_id=cohort_id
+    )
+
+  def get_cohort_drug_exposure_table(self, cohort_id: int) -> Stream:
+    """
+    Get drug_exposure table of a cohort.
+    Data stream connection will be opened.
+
+    :param int cohort_id:
+      ID of the cohort.
+
+    :return: Stream object.
+    :rtype: Stream
+    """
+    return Stream(
+        self.stub.GetCohortDrugExposureTable,
+        RequestCohortStream,
+        cohort_id=cohort_id
+    )
+
+  def get_cohort_measurement_table(self, cohort_id: int) -> Stream:
+    """
+    Get measurement table of a cohort.
+    Data stream connection will be opened.
+
+    :param int cohort_id:
+      ID of the cohort.
+
+    :return: Stream object.
+    :rtype: Stream
+    """
+    return Stream(
+        self.stub.GetCohortMeasurementTable,
+        RequestCohortStream,
+        cohort_id=cohort_id
+    )
+
+  def get_cohort_observation_period_table(self, cohort_id: int) -> Stream:
+    """
+    Get observation_period table of a cohort.
+    Data stream connection will be opened.
+
+    :param int cohort_id:
+      ID of the cohort.
+
+    :return: Stream object.
+    :rtype: Stream
+    """
+    return Stream(
+        self.stub.GetCohortObservationPeriodTable,
+        RequestCohortStream,
+        cohort_id=cohort_id
+    )
+
+  def get_cohort_observation_table(self, cohort_id: int) -> Stream:
+    """
+    Get observation table of a cohort.
+    Data stream connection will be opened.
+
+    :param int cohort_id:
+      ID of the cohort.
+
+    :return: Stream object.
+    :rtype: Stream
+    """
+    return Stream(
+        self.stub.GetCohortObservationTable,
+        RequestCohortStream,
+        cohort_id=cohort_id
+    )
+
+  def get_cohort_procedure_occurrence_table(self, cohort_id: int) -> Stream:
+    """
+    Get procedure_occurrence table of a cohort.
+    Data stream connection will be opened.
+
+    :param int cohort_id:
+      ID of the cohort.
+
+    :return: Stream object.
+    :rtype: Stream
+    """
+    return Stream(
+        self.stub.GetCohortProcedureOccurrenceTable,
+        RequestCohortStream,
+        cohort_id=cohort_id
+    )
+
+  def get_cohort_visit_occurrence_table(self, cohort_id: int) -> Stream:
+    """
+    Get visit_occurrence table of a cohort.
+    Data stream connection will be opened.
+
+    :param int cohort_id:
+      ID of the cohort.
+
+    :return: Stream object.
+    :rtype: Stream
+    """
+    return Stream(
+        self.stub.GetCohortVisitOccurrenceTable,
+        RequestCohortStream,
+        cohort_id=cohort_id
+    )
