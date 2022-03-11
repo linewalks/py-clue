@@ -74,6 +74,11 @@ class CLUEStub(object):
                 request_serializer=clue__pb2.RequestCohortStream.SerializeToString,
                 response_deserializer=clue__pb2.VisitOccurrenceInfo.FromString,
                 )
+        self.GetCohortComparison = channel.unary_unary(
+                '/CLUE/GetCohortComparison',
+                request_serializer=clue__pb2.RequestComparison.SerializeToString,
+                response_deserializer=clue__pb2.ResponseComparison.FromString,
+                )
 
 
 class CLUEServicer(object):
@@ -151,6 +156,12 @@ class CLUEServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def GetCohortComparison(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_CLUEServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -213,6 +224,11 @@ def add_CLUEServicer_to_server(servicer, server):
                     servicer.GetCohortVisitOccurrenceTable,
                     request_deserializer=clue__pb2.RequestCohortStream.FromString,
                     response_serializer=clue__pb2.VisitOccurrenceInfo.SerializeToString,
+            ),
+            'GetCohortComparison': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetCohortComparison,
+                    request_deserializer=clue__pb2.RequestComparison.FromString,
+                    response_serializer=clue__pb2.ResponseComparison.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -425,5 +441,22 @@ class CLUE(object):
         return grpc.experimental.stream_stream(request_iterator, target, '/CLUE/GetCohortVisitOccurrenceTable',
             clue__pb2.RequestCohortStream.SerializeToString,
             clue__pb2.VisitOccurrenceInfo.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetCohortComparison(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/CLUE/GetCohortComparison',
+            clue__pb2.RequestComparison.SerializeToString,
+            clue__pb2.ResponseComparison.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
