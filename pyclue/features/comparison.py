@@ -39,4 +39,3 @@ class CohortComparisonFeatures:
       rows.append(row_dict)
 
     return rows
- 
