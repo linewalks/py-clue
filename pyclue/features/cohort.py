@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Dict
 from clue_pb2 import (
     RequestCohortList,
     RequestCohortStream
@@ -15,7 +15,7 @@ class CohortFeatures:
       page: int = 1,
       length: int = 0,
       term: str = ""
-  ) -> List[dict]:
+  ) -> List[Dict]:
     """
     Get the list of cohorts.
 

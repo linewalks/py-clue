@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\nclue.proto\"/\n\x0cRequestLogin\x12\r\n\x05\x65mail\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"<\n\rResponseLogin\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x15\n\rrefresh_token\x18\x02 \x01(\t\"?\n\x11RequestCohortList\x12\x0c\n\x04term\x18\x01 \x01(\t\x12\x0c\n\x04page\x18\x02 \x01(\x05\x12\x0e\n\x06length\x18\x03 \x01(\x05\"\x86\x01\n\nCohortInfo\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x16\n\x0egenerated_time\x18\x03 \x01(\t\x12\x14\n\x0cperson_count\x18\x04 \x01(\x05\x12\x0c\n\x04\x64one\x18\x05 \x01(\t\x12\x13\n\x0bupdate_flag\x18\x06 \x01(\x05\x12\r\n\x05state\x18\x07 \x01(\x05\"6\n\x12ResponseCohortList\x12 \n\x0b\x63ohort_list\x18\x01 \x03(\x0b\x32\x0b.CohortInfo\";\n\x13RequestCohortStream\x12\x11\n\tfetch_num\x18\x01 \x01(\x05\x12\x11\n\tcohort_id\x18\x02 \x01(\x05\"\xcc\x06\n\nPersonInfo\x12\x11\n\tperson_id\x18\x01 \x01(\x05\x12\x19\n\x11gender_concept_id\x18\x02 \x01(\x05\x12\x15\n\ryear_of_birth\x18\x03 \x01(\x05\x12\x17\n\x0frace_concept_id\x18\x04 \x01(\x05\x12\x1c\n\x14\x65thnicity_concept_id\x18\x05 \x01(\x05\x12\x1b\n\x0emonth_of_birth\x18\x06 \x01(\x05H\x00\x88\x01\x01\x12\x19\n\x0c\x64\x61y_of_birth\x18\x07 \x01(\x05H\x01\x88\x01\x01\x12\x1b\n\x0e\x62irth_datetime\x18\x08 \x01(\tH\x02\x88\x01\x01\x12\x18\n\x0blocation_id\x18\t \x01(\x05H\x03\x88\x01\x01\x12\x18\n\x0bprovider_id\x18\n \x01(\x05H\x04\x88\x01\x01\x12\x19\n\x0c\x63\x61re_site_id\x18\x0b \x01(\x05H\x05\x88\x01\x01\x12 \n\x13person_source_value\x18\x0c \x01(\tH\x06\x88\x01\x01\x12 \n\x13gender_source_value\x18\r \x01(\tH\x07\x88\x01\x01\x12%\n\x18gender_source_concept_id\x18\x0e \x01(\x05H\x08\x88\x01\x01\x12\x1e\n\x11race_source_value\x18\x0f \x01(\tH\t\x88\x01\x01\x12#\n\x16race_source_concept_id\x18\x10 \x01(\x05H\n\x88\x01\x01\x12#\n\x16\x65thnicity_source_value\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12(\n\x1b\x65thnicity_source_concept_id\x18\x12 \x01(\x05H\x0c\x88\x01\x01\x42\x11\n\x0f_month_of_birthB\x0f\n\r_day_of_birthB\x11\n\x0f_birth_datetimeB\x0e\n\x0c_location_idB\x0e\n\x0c_provider_idB\x0f\n\r_care_site_idB\x16\n\x14_person_source_valueB\x16\n\x14_gender_source_valueB\x1b\n\x19_gender_source_concept_idB\x14\n\x12_race_source_valueB\x19\n\x17_race_source_concept_idB\x19\n\x17_ethnicity_source_valueB\x1e\n\x1c_ethnicity_source_concept_id\"\xca\x06\n\x17\x43onditionOccurrenceInfo\x12\x1f\n\x17\x63ondition_occurrence_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x1c\n\x14\x63ondition_concept_id\x18\x03 \x01(\x05\x12\x1c\n\x14\x63ondition_start_date\x18\x04 \x01(\t\x12!\n\x19\x63ondition_type_concept_id\x18\x05 \x01(\x05\x12%\n\x18\x63ondition_start_datetime\x18\x06 \x01(\tH\x00\x88\x01\x01\x12\x1f\n\x12\x63ondition_end_date\x18\x07 \x01(\tH\x01\x88\x01\x01\x12#\n\x16\x63ondition_end_datetime\x18\x08 \x01(\tH\x02\x88\x01\x01\x12(\n\x1b\x63ondition_status_concept_id\x18\t \x01(\x05H\x03\x88\x01\x01\x12\x18\n\x0bstop_reason\x18\n \x01(\tH\x04\x88\x01\x01\x12\x18\n\x0bprovider_id\x18\x0b \x01(\x05H\x05\x88\x01\x01\x12 \n\x13visit_occurrence_id\x18\x0c \x01(\x05H\x06\x88\x01\x01\x12\x1c\n\x0fvisit_detail_id\x18\r \x01(\x05H\x07\x88\x01\x01\x12#\n\x16\x63ondition_source_value\x18\x0e \x01(\tH\x08\x88\x01\x01\x12(\n\x1b\x63ondition_source_concept_id\x18\x0f \x01(\x05H\t\x88\x01\x01\x12*\n\x1d\x63ondition_status_source_value\x18\x10 \x01(\tH\n\x88\x01\x01\x42\x1b\n\x19_condition_start_datetimeB\x15\n\x13_condition_end_dateB\x19\n\x17_condition_end_datetimeB\x1e\n\x1c_condition_status_concept_idB\x0e\n\x0c_stop_reasonB\x0e\n\x0c_provider_idB\x16\n\x14_visit_occurrence_idB\x12\n\x10_visit_detail_idB\x19\n\x17_condition_source_valueB\x1e\n\x1c_condition_source_concept_idB \n\x1e_condition_status_source_value\"\xce\x02\n\tDeathInfo\x12\x11\n\tperson_id\x18\x01 \x01(\x05\x12\x12\n\ndeath_date\x18\x02 \x01(\t\x12\x1b\n\x0e\x64\x65\x61th_datetime\x18\x03 \x01(\tH\x00\x88\x01\x01\x12\"\n\x15\x64\x65\x61th_type_concept_id\x18\x04 \x01(\x05H\x01\x88\x01\x01\x12\x1d\n\x10\x63\x61use_concept_id\x18\x05 \x01(\tH\x02\x88\x01\x01\x12\x1f\n\x12\x63\x61use_source_value\x18\x06 \x01(\tH\x03\x88\x01\x01\x12$\n\x17\x63\x61use_source_concept_id\x18\x07 \x01(\x05H\x04\x88\x01\x01\x42\x11\n\x0f_death_datetimeB\x18\n\x16_death_type_concept_idB\x13\n\x11_cause_concept_idB\x15\n\x13_cause_source_valueB\x1a\n\x18_cause_source_concept_id\"\xee\x05\n\x12\x44\x65viceExposureInfo\x12\x1a\n\x12\x64\x65vice_exposure_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x19\n\x11\x64\x65vice_concept_id\x18\x03 \x01(\x05\x12\"\n\x1a\x64\x65vice_exposure_start_date\x18\x04 \x01(\t\x12\x1e\n\x16\x64\x65vice_type_concept_id\x18\x05 \x01(\x05\x12+\n\x1e\x64\x65vice_exposure_start_datetime\x18\x06 \x01(\tH\x00\x88\x01\x01\x12%\n\x18\x64\x65vice_exposure_end_date\x18\x07 \x01(\tH\x01\x88\x01\x01\x12)\n\x1c\x64\x65vice_exposure_end_datetime\x18\x08 \x01(\tH\x02\x88\x01\x01\x12\x1d\n\x10unique_device_id\x18\t \x01(\tH\x03\x88\x01\x01\x12\x15\n\x08quantity\x18\n \x01(\x05H\x04\x88\x01\x01\x12\x18\n\x0bprovider_id\x18\x0b \x01(\x05H\x05\x88\x01\x01\x12 \n\x13visit_occurrence_id\x18\x0c \x01(\x05H\x06\x88\x01\x01\x12\x1c\n\x0fvisit_detail_id\x18\r \x01(\x05H\x07\x88\x01\x01\x12 \n\x13\x64\x65vice_source_value\x18\x0e \x01(\tH\x08\x88\x01\x01\x12%\n\x18\x64\x65vice_source_concept_id\x18\x0f \x01(\x05H\t\x88\x01\x01\x42!\n\x1f_device_exposure_start_datetimeB\x1b\n\x19_device_exposure_end_dateB\x1f\n\x1d_device_exposure_end_datetimeB\x13\n\x11_unique_device_idB\x0b\n\t_quantityB\x0e\n\x0c_provider_idB\x16\n\x14_visit_occurrence_idB\x12\n\x10_visit_detail_idB\x16\n\x14_device_source_valueB\x1b\n\x19_device_source_concept_id\"\x96\x08\n\x10\x44rugExposureInfo\x12\x18\n\x10\x64rug_exposure_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x17\n\x0f\x64rug_concept_id\x18\x03 \x01(\x05\x12 \n\x18\x64rug_exposure_start_date\x18\x04 \x01(\t\x12\x1e\n\x16\x64rug_exposure_end_date\x18\x05 \x01(\t\x12\x1c\n\x14\x64rug_type_concept_id\x18\x06 \x01(\x05\x12)\n\x1c\x64rug_exposure_start_datetime\x18\x07 \x01(\tH\x00\x88\x01\x01\x12\'\n\x1a\x64rug_exposure_end_datetime\x18\x08 \x01(\tH\x01\x88\x01\x01\x12\x1e\n\x11verbatim_end_date\x18\t \x01(\tH\x02\x88\x01\x01\x12\x18\n\x0bstop_reason\x18\n \x01(\tH\x03\x88\x01\x01\x12\x14\n\x07refills\x18\x0b \x01(\x05H\x04\x88\x01\x01\x12\x15\n\x08quantity\x18\x0c \x01(\x02H\x05\x88\x01\x01\x12\x18\n\x0b\x64\x61ys_supply\x18\r \x01(\x05H\x06\x88\x01\x01\x12\x10\n\x03sig\x18\x0e \x01(\tH\x07\x88\x01\x01\x12\x1d\n\x10route_concept_id\x18\x0f \x01(\x05H\x08\x88\x01\x01\x12\x17\n\nlot_number\x18\x10 \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bprovider_id\x18\x11 \x01(\x05H\n\x88\x01\x01\x12 \n\x13visit_occurrence_id\x18\x12 \x01(\x05H\x0b\x88\x01\x01\x12\x1c\n\x0fvisit_detail_id\x18\x13 \x01(\x05H\x0c\x88\x01\x01\x12\x1e\n\x11\x64rug_source_value\x18\x14 \x01(\tH\r\x88\x01\x01\x12#\n\x16\x64rug_source_concept_id\x18\x15 \x01(\x05H\x0e\x88\x01\x01\x12\x1f\n\x12route_source_value\x18\x16 \x01(\tH\x0f\x88\x01\x01\x12#\n\x16\x64ose_unit_source_value\x18\x17 \x01(\tH\x10\x88\x01\x01\x42\x1f\n\x1d_drug_exposure_start_datetimeB\x1d\n\x1b_drug_exposure_end_datetimeB\x14\n\x12_verbatim_end_dateB\x0e\n\x0c_stop_reasonB\n\n\x08_refillsB\x0b\n\t_quantityB\x0e\n\x0c_days_supplyB\x06\n\x04_sigB\x13\n\x11_route_concept_idB\r\n\x0b_lot_numberB\x0e\n\x0c_provider_idB\x16\n\x14_visit_occurrence_idB\x12\n\x10_visit_detail_idB\x14\n\x12_drug_source_valueB\x19\n\x17_drug_source_concept_idB\x15\n\x13_route_source_valueB\x19\n\x17_dose_unit_source_value\"\xc7\x07\n\x0fMeasurementInfo\x12\x16\n\x0emeasurement_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x1e\n\x16measurement_concept_id\x18\x03 \x01(\x05\x12\x18\n\x10measurement_date\x18\x04 \x01(\t\x12#\n\x1bmeasurement_type_concept_id\x18\x05 \x01(\x05\x12!\n\x14measurement_datetime\x18\x06 \x01(\tH\x00\x88\x01\x01\x12\x1d\n\x10measurement_time\x18\x07 \x01(\tH\x01\x88\x01\x01\x12 \n\x13operator_concept_id\x18\x08 \x01(\x05H\x02\x88\x01\x01\x12\x1c\n\x0fvalue_as_number\x18\t \x01(\x02H\x03\x88\x01\x01\x12 \n\x13value_as_concept_id\x18\n \x01(\x05H\x04\x88\x01\x01\x12\x1c\n\x0funit_concept_id\x18\x0b \x01(\x05H\x05\x88\x01\x01\x12\x16\n\trange_low\x18\x0c \x01(\x02H\x06\x88\x01\x01\x12\x17\n\nrange_high\x18\r \x01(\x02H\x07\x88\x01\x01\x12\x18\n\x0bprovider_id\x18\x0e \x01(\x05H\x08\x88\x01\x01\x12 \n\x13visit_occurrence_id\x18\x0f \x01(\x05H\t\x88\x01\x01\x12\x1c\n\x0fvisit_detail_id\x18\x10 \x01(\x05H\n\x88\x01\x01\x12%\n\x18measurement_source_value\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12*\n\x1dmeasurement_source_concept_id\x18\x12 \x01(\x05H\x0c\x88\x01\x01\x12\x1e\n\x11unit_source_value\x18\x13 \x01(\tH\r\x88\x01\x01\x12\x1f\n\x12value_source_value\x18\x14 \x01(\tH\x0e\x88\x01\x01\x42\x17\n\x15_measurement_datetimeB\x13\n\x11_measurement_timeB\x16\n\x14_operator_concept_idB\x12\n\x10_value_as_numberB\x16\n\x14_value_as_concept_idB\x12\n\x10_unit_concept_idB\x0c\n\n_range_lowB\r\n\x0b_range_highB\x0e\n\x0c_provider_idB\x16\n\x14_visit_occurrence_idB\x12\n\x10_visit_detail_idB\x1b\n\x19_measurement_source_valueB \n\x1e_measurement_source_concept_idB\x14\n\x12_unit_source_valueB\x15\n\x13_value_source_value\"\xb5\x01\n\x15ObservationPeriodInfo\x12\x1d\n\x15observation_period_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12%\n\x1dobservation_period_start_date\x18\x03 \x01(\t\x12#\n\x1bobservation_period_end_date\x18\x04 \x01(\t\x12\x1e\n\x16period_type_concept_id\x18\x05 \x01(\x05\"\x81\x07\n\x0fObservationInfo\x12\x16\n\x0eobservation_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x1e\n\x16observation_concept_id\x18\x03 \x01(\x05\x12\x18\n\x10observation_date\x18\x04 \x01(\t\x12#\n\x1bobservation_type_concept_id\x18\x05 \x01(\x05\x12!\n\x14observation_datetime\x18\x06 \x01(\tH\x00\x88\x01\x01\x12\x1c\n\x0fvalue_as_number\x18\x07 \x01(\x02H\x01\x88\x01\x01\x12\x1c\n\x0fvalue_as_string\x18\x08 \x01(\tH\x02\x88\x01\x01\x12 \n\x13value_as_concept_id\x18\t \x01(\x05H\x03\x88\x01\x01\x12!\n\x14qualifier_concept_id\x18\n \x01(\x05H\x04\x88\x01\x01\x12\x1c\n\x0funit_concept_id\x18\x0b \x01(\x05H\x05\x88\x01\x01\x12\x18\n\x0bprovider_id\x18\x0c \x01(\x05H\x06\x88\x01\x01\x12 \n\x13visit_occurrence_id\x18\r \x01(\x05H\x07\x88\x01\x01\x12\x1c\n\x0fvisit_detail_id\x18\x0e \x01(\x05H\x08\x88\x01\x01\x12%\n\x18observation_source_value\x18\x0f \x01(\tH\t\x88\x01\x01\x12*\n\x1dobservation_source_concept_id\x18\x10 \x01(\x05H\n\x88\x01\x01\x12\x1e\n\x11unit_source_value\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12#\n\x16qualifier_source_value\x18\x12 \x01(\x05H\x0c\x88\x01\x01\x42\x17\n\x15_observation_datetimeB\x12\n\x10_value_as_numberB\x12\n\x10_value_as_stringB\x16\n\x14_value_as_concept_idB\x17\n\x15_qualifier_concept_idB\x12\n\x10_unit_concept_idB\x0e\n\x0c_provider_idB\x16\n\x14_visit_occurrence_idB\x12\n\x10_visit_detail_idB\x1b\n\x19_observation_source_valueB \n\x1e_observation_source_concept_idB\x14\n\x12_unit_source_valueB\x19\n\x17_qualifier_source_value\"\x9a\x05\n\x17ProcedureOccurrenceInfo\x12\x1f\n\x17procedure_occurrence_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x1c\n\x14procedure_concept_id\x18\x03 \x01(\x05\x12\x16\n\x0eprocedure_date\x18\x04 \x01(\t\x12!\n\x19procedure_type_concept_id\x18\x05 \x01(\x05\x12\x1f\n\x12procedure_datetime\x18\x06 \x01(\tH\x00\x88\x01\x01\x12 \n\x13modifier_concept_id\x18\x07 \x01(\x05H\x01\x88\x01\x01\x12\x15\n\x08quantity\x18\x08 \x01(\x05H\x02\x88\x01\x01\x12\x18\n\x0bprovider_id\x18\t \x01(\x05H\x03\x88\x01\x01\x12 \n\x13visit_occurrence_id\x18\n \x01(\x05H\x04\x88\x01\x01\x12\x1c\n\x0fvisit_detail_id\x18\x0b \x01(\x05H\x05\x88\x01\x01\x12#\n\x16procedure_source_value\x18\x0c \x01(\tH\x06\x88\x01\x01\x12(\n\x1bprocedure_source_concept_id\x18\r \x01(\x05H\x07\x88\x01\x01\x12\"\n\x15modifier_source_value\x18\x0e \x01(\tH\x08\x88\x01\x01\x42\x15\n\x13_procedure_datetimeB\x16\n\x14_modifier_concept_idB\x0b\n\t_quantityB\x0e\n\x0c_provider_idB\x16\n\x14_visit_occurrence_idB\x12\n\x10_visit_detail_idB\x19\n\x17_procedure_source_valueB\x1e\n\x1c_procedure_source_concept_idB\x18\n\x16_modifier_source_value\"\xd4\x06\n\x13VisitOccurrenceInfo\x12\x1b\n\x13visit_occurrence_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x18\n\x10visit_concept_id\x18\x03 \x01(\x05\x12\x18\n\x10visit_start_date\x18\x04 \x01(\t\x12\x16\n\x0evisit_end_date\x18\x05 \x01(\t\x12\x1d\n\x15visit_type_concept_id\x18\x06 \x01(\x05\x12!\n\x14visit_start_datetime\x18\x07 \x01(\tH\x00\x88\x01\x01\x12\x1f\n\x12visit_end_datetime\x18\x08 \x01(\tH\x01\x88\x01\x01\x12\x18\n\x0bprovider_id\x18\t \x01(\x05H\x02\x88\x01\x01\x12\x19\n\x0c\x63\x61re_site_id\x18\n \x01(\x05H\x03\x88\x01\x01\x12\x1f\n\x12visit_source_value\x18\x0b \x01(\tH\x04\x88\x01\x01\x12$\n\x17visit_source_concept_id\x18\x0c \x01(\x05H\x05\x88\x01\x01\x12(\n\x1b\x61\x64mitting_source_concept_id\x18\r \x01(\x05H\x06\x88\x01\x01\x12#\n\x16\x61\x64mitting_source_value\x18\x0e \x01(\tH\x07\x88\x01\x01\x12$\n\x17\x64ischarge_to_concept_id\x18\x0f \x01(\x05H\x08\x88\x01\x01\x12&\n\x19\x64ischarge_to_source_value\x18\x10 \x01(\tH\t\x88\x01\x01\x12*\n\x1dpreceding_visit_occurrence_id\x18\x11 \x01(\x05H\n\x88\x01\x01\x42\x17\n\x15_visit_start_datetimeB\x15\n\x13_visit_end_datetimeB\x0e\n\x0c_provider_idB\x0f\n\r_care_site_idB\x15\n\x13_visit_source_valueB\x1a\n\x18_visit_source_concept_idB\x1e\n\x1c_admitting_source_concept_idB\x19\n\x17_admitting_source_valueB\x1a\n\x18_discharge_to_concept_idB\x1c\n\x1a_discharge_to_source_valueB \n\x1e_preceding_visit_occurrence_id2\x84\x07\n\x04\x43LUE\x12,\n\tAuthLogin\x12\r.RequestLogin\x1a\x0e.ResponseLogin\"\x00\x12:\n\rGetCohortList\x12\x12.RequestCohortList\x1a\x13.ResponseCohortList\"\x00\x12?\n\x14GetCohortPersonTable\x12\x14.RequestCohortStream\x1a\x0b.PersonInfo\"\x00(\x01\x30\x01\x12Y\n!GetCohortConditionOccurrenceTable\x12\x14.RequestCohortStream\x1a\x18.ConditionOccurrenceInfo\"\x00(\x01\x30\x01\x12=\n\x13GetCohortDeathTable\x12\x14.RequestCohortStream\x1a\n.DeathInfo\"\x00(\x01\x30\x01\x12O\n\x1cGetCohortDeviceExposureTable\x12\x14.RequestCohortStream\x1a\x13.DeviceExposureInfo\"\x00(\x01\x30\x01\x12K\n\x1aGetCohortDrugExposureTable\x12\x14.RequestCohortStream\x1a\x11.DrugExposureInfo\"\x00(\x01\x30\x01\x12I\n\x19GetCohortMeasurementTable\x12\x14.RequestCohortStream\x1a\x10.MeasurementInfo\"\x00(\x01\x30\x01\x12U\n\x1fGetCohortObservationPeriodTable\x12\x14.RequestCohortStream\x1a\x16.ObservationPeriodInfo\"\x00(\x01\x30\x01\x12I\n\x19GetCohortObservationTable\x12\x14.RequestCohortStream\x1a\x10.ObservationInfo\"\x00(\x01\x30\x01\x12Y\n!GetCohortProcedureOccurrenceTable\x12\x14.RequestCohortStream\x1a\x18.ProcedureOccurrenceInfo\"\x00(\x01\x30\x01\x12Q\n\x1dGetCohortVisitOccurrenceTable\x12\x14.RequestCohortStream\x1a\x14.VisitOccurrenceInfo\"\x00(\x01\x30\x01\x62\x06proto3'
+  serialized_pb=b'\n\nclue.proto\"/\n\x0cRequestLogin\x12\r\n\x05\x65mail\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"<\n\rResponseLogin\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x15\n\rrefresh_token\x18\x02 \x01(\t\"?\n\x11RequestCohortList\x12\x0c\n\x04term\x18\x01 \x01(\t\x12\x0c\n\x04page\x18\x02 \x01(\x05\x12\x0e\n\x06length\x18\x03 \x01(\x05\"\x86\x01\n\nCohortInfo\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x16\n\x0egenerated_time\x18\x03 \x01(\t\x12\x14\n\x0cperson_count\x18\x04 \x01(\x05\x12\x0c\n\x04\x64one\x18\x05 \x01(\t\x12\x13\n\x0bupdate_flag\x18\x06 \x01(\x05\x12\r\n\x05state\x18\x07 \x01(\x05\"6\n\x12ResponseCohortList\x12 \n\x0b\x63ohort_list\x18\x01 \x03(\x0b\x32\x0b.CohortInfo\";\n\x13RequestCohortStream\x12\x11\n\tfetch_num\x18\x01 \x01(\x05\x12\x11\n\tcohort_id\x18\x02 \x01(\x05\"\xea\x03\n\nPersonInfo\x12\x11\n\tperson_id\x18\x01 \x01(\x05\x12\x19\n\x11gender_concept_id\x18\x02 \x01(\x05\x12\x15\n\ryear_of_birth\x18\x03 \x01(\x05\x12\x17\n\x0frace_concept_id\x18\x04 \x01(\x05\x12\x1c\n\x14\x65thnicity_concept_id\x18\x05 \x01(\x05\x12\x16\n\x0emonth_of_birth\x18\x06 \x01(\x05\x12\x14\n\x0c\x64\x61y_of_birth\x18\x07 \x01(\x05\x12\x16\n\x0e\x62irth_datetime\x18\x08 \x01(\t\x12\x13\n\x0blocation_id\x18\t \x01(\x05\x12\x13\n\x0bprovider_id\x18\n \x01(\x05\x12\x14\n\x0c\x63\x61re_site_id\x18\x0b \x01(\x05\x12\x1b\n\x13person_source_value\x18\x0c \x01(\t\x12\x1b\n\x13gender_source_value\x18\r \x01(\t\x12 \n\x18gender_source_concept_id\x18\x0e \x01(\x05\x12\x19\n\x11race_source_value\x18\x0f \x01(\t\x12\x1e\n\x16race_source_concept_id\x18\x10 \x01(\x05\x12\x1e\n\x16\x65thnicity_source_value\x18\x11 \x01(\t\x12#\n\x1b\x65thnicity_source_concept_id\x18\x12 \x01(\x05\"\xfb\x03\n\x17\x43onditionOccurrenceInfo\x12\x1f\n\x17\x63ondition_occurrence_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x1c\n\x14\x63ondition_concept_id\x18\x03 \x01(\x05\x12\x1c\n\x14\x63ondition_start_date\x18\x04 \x01(\t\x12!\n\x19\x63ondition_type_concept_id\x18\x05 \x01(\x05\x12 \n\x18\x63ondition_start_datetime\x18\x06 \x01(\t\x12\x1a\n\x12\x63ondition_end_date\x18\x07 \x01(\t\x12\x1e\n\x16\x63ondition_end_datetime\x18\x08 \x01(\t\x12#\n\x1b\x63ondition_status_concept_id\x18\t \x01(\x05\x12\x13\n\x0bstop_reason\x18\n \x01(\t\x12\x13\n\x0bprovider_id\x18\x0b \x01(\x05\x12\x1b\n\x13visit_occurrence_id\x18\x0c \x01(\x05\x12\x17\n\x0fvisit_detail_id\x18\r \x01(\x05\x12\x1e\n\x16\x63ondition_source_value\x18\x0e \x01(\t\x12#\n\x1b\x63ondition_source_concept_id\x18\x0f \x01(\x05\x12%\n\x1d\x63ondition_status_source_value\x18\x10 \x01(\t\"\xc0\x01\n\tDeathInfo\x12\x11\n\tperson_id\x18\x01 \x01(\x05\x12\x12\n\ndeath_date\x18\x02 \x01(\t\x12\x16\n\x0e\x64\x65\x61th_datetime\x18\x03 \x01(\t\x12\x1d\n\x15\x64\x65\x61th_type_concept_id\x18\x04 \x01(\x05\x12\x18\n\x10\x63\x61use_concept_id\x18\x05 \x01(\t\x12\x1a\n\x12\x63\x61use_source_value\x18\x06 \x01(\t\x12\x1f\n\x17\x63\x61use_source_concept_id\x18\x07 \x01(\x05\"\xc8\x03\n\x12\x44\x65viceExposureInfo\x12\x1a\n\x12\x64\x65vice_exposure_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x19\n\x11\x64\x65vice_concept_id\x18\x03 \x01(\x05\x12\"\n\x1a\x64\x65vice_exposure_start_date\x18\x04 \x01(\t\x12\x1e\n\x16\x64\x65vice_type_concept_id\x18\x05 \x01(\x05\x12&\n\x1e\x64\x65vice_exposure_start_datetime\x18\x06 \x01(\t\x12 \n\x18\x64\x65vice_exposure_end_date\x18\x07 \x01(\t\x12$\n\x1c\x64\x65vice_exposure_end_datetime\x18\x08 \x01(\t\x12\x18\n\x10unique_device_id\x18\t \x01(\t\x12\x10\n\x08quantity\x18\n \x01(\x05\x12\x13\n\x0bprovider_id\x18\x0b \x01(\x05\x12\x1b\n\x13visit_occurrence_id\x18\x0c \x01(\x05\x12\x17\n\x0fvisit_detail_id\x18\r \x01(\x05\x12\x1b\n\x13\x64\x65vice_source_value\x18\x0e \x01(\t\x12 \n\x18\x64\x65vice_source_concept_id\x18\x0f \x01(\x05\"\xe7\x04\n\x10\x44rugExposureInfo\x12\x18\n\x10\x64rug_exposure_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x17\n\x0f\x64rug_concept_id\x18\x03 \x01(\x05\x12 \n\x18\x64rug_exposure_start_date\x18\x04 \x01(\t\x12\x1e\n\x16\x64rug_exposure_end_date\x18\x05 \x01(\t\x12\x1c\n\x14\x64rug_type_concept_id\x18\x06 \x01(\x05\x12$\n\x1c\x64rug_exposure_start_datetime\x18\x07 \x01(\t\x12\"\n\x1a\x64rug_exposure_end_datetime\x18\x08 \x01(\t\x12\x19\n\x11verbatim_end_date\x18\t \x01(\t\x12\x13\n\x0bstop_reason\x18\n \x01(\t\x12\x0f\n\x07refills\x18\x0b \x01(\x05\x12\x10\n\x08quantity\x18\x0c \x01(\x02\x12\x13\n\x0b\x64\x61ys_supply\x18\r \x01(\x05\x12\x0b\n\x03sig\x18\x0e \x01(\t\x12\x18\n\x10route_concept_id\x18\x0f \x01(\x05\x12\x12\n\nlot_number\x18\x10 \x01(\t\x12\x13\n\x0bprovider_id\x18\x11 \x01(\x05\x12\x1b\n\x13visit_occurrence_id\x18\x12 \x01(\x05\x12\x17\n\x0fvisit_detail_id\x18\x13 \x01(\x05\x12\x19\n\x11\x64rug_source_value\x18\x14 \x01(\t\x12\x1e\n\x16\x64rug_source_concept_id\x18\x15 \x01(\x05\x12\x1a\n\x12route_source_value\x18\x16 \x01(\t\x12\x1e\n\x16\x64ose_unit_source_value\x18\x17 \x01(\t\"\xb1\x04\n\x0fMeasurementInfo\x12\x16\n\x0emeasurement_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x1e\n\x16measurement_concept_id\x18\x03 \x01(\x05\x12\x18\n\x10measurement_date\x18\x04 \x01(\t\x12#\n\x1bmeasurement_type_concept_id\x18\x05 \x01(\x05\x12\x1c\n\x14measurement_datetime\x18\x06 \x01(\t\x12\x18\n\x10measurement_time\x18\x07 \x01(\t\x12\x1b\n\x13operator_concept_id\x18\x08 \x01(\x05\x12\x17\n\x0fvalue_as_number\x18\t \x01(\x02\x12\x1b\n\x13value_as_concept_id\x18\n \x01(\x05\x12\x17\n\x0funit_concept_id\x18\x0b \x01(\x05\x12\x11\n\trange_low\x18\x0c \x01(\x02\x12\x12\n\nrange_high\x18\r \x01(\x02\x12\x13\n\x0bprovider_id\x18\x0e \x01(\x05\x12\x1b\n\x13visit_occurrence_id\x18\x0f \x01(\x05\x12\x17\n\x0fvisit_detail_id\x18\x10 \x01(\x05\x12 \n\x18measurement_source_value\x18\x11 \x01(\t\x12%\n\x1dmeasurement_source_concept_id\x18\x12 \x01(\x05\x12\x19\n\x11unit_source_value\x18\x13 \x01(\t\x12\x1a\n\x12value_source_value\x18\x14 \x01(\t\"\xb5\x01\n\x15ObservationPeriodInfo\x12\x1d\n\x15observation_period_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12%\n\x1dobservation_period_start_date\x18\x03 \x01(\t\x12#\n\x1bobservation_period_end_date\x18\x04 \x01(\t\x12\x1e\n\x16period_type_concept_id\x18\x05 \x01(\x05\"\x8e\x04\n\x0fObservationInfo\x12\x16\n\x0eobservation_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x1e\n\x16observation_concept_id\x18\x03 \x01(\x05\x12\x18\n\x10observation_date\x18\x04 \x01(\t\x12#\n\x1bobservation_type_concept_id\x18\x05 \x01(\x05\x12\x1c\n\x14observation_datetime\x18\x06 \x01(\t\x12\x17\n\x0fvalue_as_number\x18\x07 \x01(\x02\x12\x17\n\x0fvalue_as_string\x18\x08 \x01(\t\x12\x1b\n\x13value_as_concept_id\x18\t \x01(\x05\x12\x1c\n\x14qualifier_concept_id\x18\n \x01(\x05\x12\x17\n\x0funit_concept_id\x18\x0b \x01(\x05\x12\x13\n\x0bprovider_id\x18\x0c \x01(\x05\x12\x1b\n\x13visit_occurrence_id\x18\r \x01(\x05\x12\x17\n\x0fvisit_detail_id\x18\x0e \x01(\x05\x12 \n\x18observation_source_value\x18\x0f \x01(\t\x12%\n\x1dobservation_source_concept_id\x18\x10 \x01(\x05\x12\x19\n\x11unit_source_value\x18\x11 \x01(\t\x12\x1e\n\x16qualifier_source_value\x18\x12 \x01(\x05\"\xa0\x03\n\x17ProcedureOccurrenceInfo\x12\x1f\n\x17procedure_occurrence_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x1c\n\x14procedure_concept_id\x18\x03 \x01(\x05\x12\x16\n\x0eprocedure_date\x18\x04 \x01(\t\x12!\n\x19procedure_type_concept_id\x18\x05 \x01(\x05\x12\x1a\n\x12procedure_datetime\x18\x06 \x01(\t\x12\x1b\n\x13modifier_concept_id\x18\x07 \x01(\x05\x12\x10\n\x08quantity\x18\x08 \x01(\x05\x12\x13\n\x0bprovider_id\x18\t \x01(\x05\x12\x1b\n\x13visit_occurrence_id\x18\n \x01(\x05\x12\x17\n\x0fvisit_detail_id\x18\x0b \x01(\x05\x12\x1e\n\x16procedure_source_value\x18\x0c \x01(\t\x12#\n\x1bprocedure_source_concept_id\x18\r \x01(\x05\x12\x1d\n\x15modifier_source_value\x18\x0e \x01(\t\"\x82\x04\n\x13VisitOccurrenceInfo\x12\x1b\n\x13visit_occurrence_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x18\n\x10visit_concept_id\x18\x03 \x01(\x05\x12\x18\n\x10visit_start_date\x18\x04 \x01(\t\x12\x16\n\x0evisit_end_date\x18\x05 \x01(\t\x12\x1d\n\x15visit_type_concept_id\x18\x06 \x01(\x05\x12\x1c\n\x14visit_start_datetime\x18\x07 \x01(\t\x12\x1a\n\x12visit_end_datetime\x18\x08 \x01(\t\x12\x13\n\x0bprovider_id\x18\t \x01(\x05\x12\x14\n\x0c\x63\x61re_site_id\x18\n \x01(\x05\x12\x1a\n\x12visit_source_value\x18\x0b \x01(\t\x12\x1f\n\x17visit_source_concept_id\x18\x0c \x01(\x05\x12#\n\x1b\x61\x64mitting_source_concept_id\x18\r \x01(\x05\x12\x1e\n\x16\x61\x64mitting_source_value\x18\x0e \x01(\t\x12\x1f\n\x17\x64ischarge_to_concept_id\x18\x0f \x01(\x05\x12!\n\x19\x64ischarge_to_source_value\x18\x10 \x01(\t\x12%\n\x1dpreceding_visit_occurrence_id\x18\x11 \x01(\x05\"*\n\x11RequestComparison\x12\x15\n\rcomparison_id\x18\x01 \x01(\x05\"F\n\x14\x43omparisonCohortInfo\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x14\n\x0cperson_count\x18\x03 \x01(\x05\"t\n\x11\x43omparisonRowInfo\x12\x11\n\tcategory1\x18\x01 \x01(\t\x12\x11\n\tcategory2\x18\x02 \x01(\t\x12\x0e\n\x06values\x18\x03 \x03(\t\x12\x0f\n\x07p_value\x18\x04 \x01(\x02\x12\x18\n\x10p_value_is_group\x18\x05 \x01(\x08\"t\n\x12ResponseComparison\x12\x0c\n\x04name\x18\x01 \x01(\t\x12*\n\x0b\x63ohort_list\x18\x02 \x03(\x0b\x32\x15.ComparisonCohortInfo\x12$\n\x08row_list\x18\x03 \x03(\x0b\x32\x12.ComparisonRowInfo2\xc6\x07\n\x04\x43LUE\x12,\n\tAuthLogin\x12\r.RequestLogin\x1a\x0e.ResponseLogin\"\x00\x12:\n\rGetCohortList\x12\x12.RequestCohortList\x1a\x13.ResponseCohortList\"\x00\x12?\n\x14GetCohortPersonTable\x12\x14.RequestCohortStream\x1a\x0b.PersonInfo\"\x00(\x01\x30\x01\x12Y\n!GetCohortConditionOccurrenceTable\x12\x14.RequestCohortStream\x1a\x18.ConditionOccurrenceInfo\"\x00(\x01\x30\x01\x12=\n\x13GetCohortDeathTable\x12\x14.RequestCohortStream\x1a\n.DeathInfo\"\x00(\x01\x30\x01\x12O\n\x1cGetCohortDeviceExposureTable\x12\x14.RequestCohortStream\x1a\x13.DeviceExposureInfo\"\x00(\x01\x30\x01\x12K\n\x1aGetCohortDrugExposureTable\x12\x14.RequestCohortStream\x1a\x11.DrugExposureInfo\"\x00(\x01\x30\x01\x12I\n\x19GetCohortMeasurementTable\x12\x14.RequestCohortStream\x1a\x10.MeasurementInfo\"\x00(\x01\x30\x01\x12U\n\x1fGetCohortObservationPeriodTable\x12\x14.RequestCohortStream\x1a\x16.ObservationPeriodInfo\"\x00(\x01\x30\x01\x12I\n\x19GetCohortObservationTable\x12\x14.RequestCohortStream\x1a\x10.ObservationInfo\"\x00(\x01\x30\x01\x12Y\n!GetCohortProcedureOccurrenceTable\x12\x14.RequestCohortStream\x1a\x18.ProcedureOccurrenceInfo\"\x00(\x01\x30\x01\x12Q\n\x1dGetCohortVisitOccurrenceTable\x12\x14.RequestCohortStream\x1a\x14.VisitOccurrenceInfo\"\x00(\x01\x30\x01\x12@\n\x13GetCohortComparison\x12\x12.RequestComparison\x1a\x13.ResponseComparison\"\x00\x62\x06proto3'
 )
 
 
@@ -439,74 +439,9 @@ _PERSONINFO = _descriptor.Descriptor(
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
-    _descriptor.OneofDescriptor(
-      name='_month_of_birth', full_name='PersonInfo._month_of_birth',
-      index=0, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_day_of_birth', full_name='PersonInfo._day_of_birth',
-      index=1, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_birth_datetime', full_name='PersonInfo._birth_datetime',
-      index=2, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_location_id', full_name='PersonInfo._location_id',
-      index=3, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_provider_id', full_name='PersonInfo._provider_id',
-      index=4, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_care_site_id', full_name='PersonInfo._care_site_id',
-      index=5, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_person_source_value', full_name='PersonInfo._person_source_value',
-      index=6, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_gender_source_value', full_name='PersonInfo._gender_source_value',
-      index=7, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_gender_source_concept_id', full_name='PersonInfo._gender_source_concept_id',
-      index=8, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_race_source_value', full_name='PersonInfo._race_source_value',
-      index=9, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_race_source_concept_id', full_name='PersonInfo._race_source_concept_id',
-      index=10, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_ethnicity_source_value', full_name='PersonInfo._ethnicity_source_value',
-      index=11, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_ethnicity_source_concept_id', full_name='PersonInfo._ethnicity_source_concept_id',
-      index=12, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
   ],
   serialized_start=445,
-  serialized_end=1289,
+  serialized_end=935,
 )
 
 
@@ -641,64 +576,9 @@ _CONDITIONOCCURRENCEINFO = _descriptor.Descriptor(
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
-    _descriptor.OneofDescriptor(
-      name='_condition_start_datetime', full_name='ConditionOccurrenceInfo._condition_start_datetime',
-      index=0, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_condition_end_date', full_name='ConditionOccurrenceInfo._condition_end_date',
-      index=1, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_condition_end_datetime', full_name='ConditionOccurrenceInfo._condition_end_datetime',
-      index=2, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_condition_status_concept_id', full_name='ConditionOccurrenceInfo._condition_status_concept_id',
-      index=3, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_stop_reason', full_name='ConditionOccurrenceInfo._stop_reason',
-      index=4, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_provider_id', full_name='ConditionOccurrenceInfo._provider_id',
-      index=5, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_visit_occurrence_id', full_name='ConditionOccurrenceInfo._visit_occurrence_id',
-      index=6, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_visit_detail_id', full_name='ConditionOccurrenceInfo._visit_detail_id',
-      index=7, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_condition_source_value', full_name='ConditionOccurrenceInfo._condition_source_value',
-      index=8, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_condition_source_concept_id', full_name='ConditionOccurrenceInfo._condition_source_concept_id',
-      index=9, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_condition_status_source_value', full_name='ConditionOccurrenceInfo._condition_status_source_value',
-      index=10, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
   ],
-  serialized_start=1292,
-  serialized_end=2134,
+  serialized_start=938,
+  serialized_end=1445,
 )
 
 
@@ -770,34 +650,9 @@ _DEATHINFO = _descriptor.Descriptor(
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
-    _descriptor.OneofDescriptor(
-      name='_death_datetime', full_name='DeathInfo._death_datetime',
-      index=0, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_death_type_concept_id', full_name='DeathInfo._death_type_concept_id',
-      index=1, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_cause_concept_id', full_name='DeathInfo._cause_concept_id',
-      index=2, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_cause_source_value', full_name='DeathInfo._cause_source_value',
-      index=3, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_cause_source_concept_id', full_name='DeathInfo._cause_source_concept_id',
-      index=4, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
   ],
-  serialized_start=2137,
-  serialized_end=2471,
+  serialized_start=1448,
+  serialized_end=1640,
 )
 
 
@@ -925,59 +780,9 @@ _DEVICEEXPOSUREINFO = _descriptor.Descriptor(
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
-    _descriptor.OneofDescriptor(
-      name='_device_exposure_start_datetime', full_name='DeviceExposureInfo._device_exposure_start_datetime',
-      index=0, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_device_exposure_end_date', full_name='DeviceExposureInfo._device_exposure_end_date',
-      index=1, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_device_exposure_end_datetime', full_name='DeviceExposureInfo._device_exposure_end_datetime',
-      index=2, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_unique_device_id', full_name='DeviceExposureInfo._unique_device_id',
-      index=3, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_quantity', full_name='DeviceExposureInfo._quantity',
-      index=4, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_provider_id', full_name='DeviceExposureInfo._provider_id',
-      index=5, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_visit_occurrence_id', full_name='DeviceExposureInfo._visit_occurrence_id',
-      index=6, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_visit_detail_id', full_name='DeviceExposureInfo._visit_detail_id',
-      index=7, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_device_source_value', full_name='DeviceExposureInfo._device_source_value',
-      index=8, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_device_source_concept_id', full_name='DeviceExposureInfo._device_source_concept_id',
-      index=9, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
   ],
-  serialized_start=2474,
-  serialized_end=3224,
+  serialized_start=1643,
+  serialized_end=2099,
 )
 
 
@@ -1161,94 +966,9 @@ _DRUGEXPOSUREINFO = _descriptor.Descriptor(
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
-    _descriptor.OneofDescriptor(
-      name='_drug_exposure_start_datetime', full_name='DrugExposureInfo._drug_exposure_start_datetime',
-      index=0, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_drug_exposure_end_datetime', full_name='DrugExposureInfo._drug_exposure_end_datetime',
-      index=1, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_verbatim_end_date', full_name='DrugExposureInfo._verbatim_end_date',
-      index=2, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_stop_reason', full_name='DrugExposureInfo._stop_reason',
-      index=3, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_refills', full_name='DrugExposureInfo._refills',
-      index=4, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_quantity', full_name='DrugExposureInfo._quantity',
-      index=5, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_days_supply', full_name='DrugExposureInfo._days_supply',
-      index=6, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_sig', full_name='DrugExposureInfo._sig',
-      index=7, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_route_concept_id', full_name='DrugExposureInfo._route_concept_id',
-      index=8, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_lot_number', full_name='DrugExposureInfo._lot_number',
-      index=9, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_provider_id', full_name='DrugExposureInfo._provider_id',
-      index=10, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_visit_occurrence_id', full_name='DrugExposureInfo._visit_occurrence_id',
-      index=11, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_visit_detail_id', full_name='DrugExposureInfo._visit_detail_id',
-      index=12, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_drug_source_value', full_name='DrugExposureInfo._drug_source_value',
-      index=13, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_drug_source_concept_id', full_name='DrugExposureInfo._drug_source_concept_id',
-      index=14, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_route_source_value', full_name='DrugExposureInfo._route_source_value',
-      index=15, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_dose_unit_source_value', full_name='DrugExposureInfo._dose_unit_source_value',
-      index=16, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
   ],
-  serialized_start=3227,
-  serialized_end=4273,
+  serialized_start=2102,
+  serialized_end=2717,
 )
 
 
@@ -1411,84 +1131,9 @@ _MEASUREMENTINFO = _descriptor.Descriptor(
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
-    _descriptor.OneofDescriptor(
-      name='_measurement_datetime', full_name='MeasurementInfo._measurement_datetime',
-      index=0, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_measurement_time', full_name='MeasurementInfo._measurement_time',
-      index=1, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_operator_concept_id', full_name='MeasurementInfo._operator_concept_id',
-      index=2, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_value_as_number', full_name='MeasurementInfo._value_as_number',
-      index=3, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_value_as_concept_id', full_name='MeasurementInfo._value_as_concept_id',
-      index=4, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_unit_concept_id', full_name='MeasurementInfo._unit_concept_id',
-      index=5, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_range_low', full_name='MeasurementInfo._range_low',
-      index=6, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_range_high', full_name='MeasurementInfo._range_high',
-      index=7, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_provider_id', full_name='MeasurementInfo._provider_id',
-      index=8, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_visit_occurrence_id', full_name='MeasurementInfo._visit_occurrence_id',
-      index=9, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_visit_detail_id', full_name='MeasurementInfo._visit_detail_id',
-      index=10, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_measurement_source_value', full_name='MeasurementInfo._measurement_source_value',
-      index=11, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_measurement_source_concept_id', full_name='MeasurementInfo._measurement_source_concept_id',
-      index=12, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_unit_source_value', full_name='MeasurementInfo._unit_source_value',
-      index=13, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_value_source_value', full_name='MeasurementInfo._value_source_value',
-      index=14, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
   ],
-  serialized_start=4276,
-  serialized_end=5243,
+  serialized_start=2720,
+  serialized_end=3281,
 )
 
 
@@ -1547,8 +1192,8 @@ _OBSERVATIONPERIODINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5246,
-  serialized_end=5427,
+  serialized_start=3284,
+  serialized_end=3465,
 )
 
 
@@ -1697,74 +1342,9 @@ _OBSERVATIONINFO = _descriptor.Descriptor(
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
-    _descriptor.OneofDescriptor(
-      name='_observation_datetime', full_name='ObservationInfo._observation_datetime',
-      index=0, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_value_as_number', full_name='ObservationInfo._value_as_number',
-      index=1, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_value_as_string', full_name='ObservationInfo._value_as_string',
-      index=2, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_value_as_concept_id', full_name='ObservationInfo._value_as_concept_id',
-      index=3, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_qualifier_concept_id', full_name='ObservationInfo._qualifier_concept_id',
-      index=4, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_unit_concept_id', full_name='ObservationInfo._unit_concept_id',
-      index=5, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_provider_id', full_name='ObservationInfo._provider_id',
-      index=6, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_visit_occurrence_id', full_name='ObservationInfo._visit_occurrence_id',
-      index=7, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_visit_detail_id', full_name='ObservationInfo._visit_detail_id',
-      index=8, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_observation_source_value', full_name='ObservationInfo._observation_source_value',
-      index=9, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_observation_source_concept_id', full_name='ObservationInfo._observation_source_concept_id',
-      index=10, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_unit_source_value', full_name='ObservationInfo._unit_source_value',
-      index=11, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_qualifier_source_value', full_name='ObservationInfo._qualifier_source_value',
-      index=12, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
   ],
-  serialized_start=5430,
-  serialized_end=6327,
+  serialized_start=3468,
+  serialized_end=3994,
 )
 
 
@@ -1885,54 +1465,9 @@ _PROCEDUREOCCURRENCEINFO = _descriptor.Descriptor(
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
-    _descriptor.OneofDescriptor(
-      name='_procedure_datetime', full_name='ProcedureOccurrenceInfo._procedure_datetime',
-      index=0, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_modifier_concept_id', full_name='ProcedureOccurrenceInfo._modifier_concept_id',
-      index=1, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_quantity', full_name='ProcedureOccurrenceInfo._quantity',
-      index=2, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_provider_id', full_name='ProcedureOccurrenceInfo._provider_id',
-      index=3, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_visit_occurrence_id', full_name='ProcedureOccurrenceInfo._visit_occurrence_id',
-      index=4, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_visit_detail_id', full_name='ProcedureOccurrenceInfo._visit_detail_id',
-      index=5, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_procedure_source_value', full_name='ProcedureOccurrenceInfo._procedure_source_value',
-      index=6, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_procedure_source_concept_id', full_name='ProcedureOccurrenceInfo._procedure_source_concept_id',
-      index=7, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_modifier_source_value', full_name='ProcedureOccurrenceInfo._modifier_source_value',
-      index=8, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
   ],
-  serialized_start=6330,
-  serialized_end=6996,
+  serialized_start=3997,
+  serialized_end=4413,
 )
 
 
@@ -2074,379 +1609,198 @@ _VISITOCCURRENCEINFO = _descriptor.Descriptor(
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
-    _descriptor.OneofDescriptor(
-      name='_visit_start_datetime', full_name='VisitOccurrenceInfo._visit_start_datetime',
-      index=0, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_visit_end_datetime', full_name='VisitOccurrenceInfo._visit_end_datetime',
-      index=1, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_provider_id', full_name='VisitOccurrenceInfo._provider_id',
-      index=2, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_care_site_id', full_name='VisitOccurrenceInfo._care_site_id',
-      index=3, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_visit_source_value', full_name='VisitOccurrenceInfo._visit_source_value',
-      index=4, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_visit_source_concept_id', full_name='VisitOccurrenceInfo._visit_source_concept_id',
-      index=5, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_admitting_source_concept_id', full_name='VisitOccurrenceInfo._admitting_source_concept_id',
-      index=6, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_admitting_source_value', full_name='VisitOccurrenceInfo._admitting_source_value',
-      index=7, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_discharge_to_concept_id', full_name='VisitOccurrenceInfo._discharge_to_concept_id',
-      index=8, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_discharge_to_source_value', full_name='VisitOccurrenceInfo._discharge_to_source_value',
-      index=9, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-    _descriptor.OneofDescriptor(
-      name='_preceding_visit_occurrence_id', full_name='VisitOccurrenceInfo._preceding_visit_occurrence_id',
-      index=10, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
   ],
-  serialized_start=6999,
-  serialized_end=7851,
+  serialized_start=4416,
+  serialized_end=4930,
+)
+
+
+_REQUESTCOMPARISON = _descriptor.Descriptor(
+  name='RequestComparison',
+  full_name='RequestComparison',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='comparison_id', full_name='RequestComparison.comparison_id', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4932,
+  serialized_end=4974,
+)
+
+
+_COMPARISONCOHORTINFO = _descriptor.Descriptor(
+  name='ComparisonCohortInfo',
+  full_name='ComparisonCohortInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='ComparisonCohortInfo.id', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='ComparisonCohortInfo.name', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='person_count', full_name='ComparisonCohortInfo.person_count', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4976,
+  serialized_end=5046,
+)
+
+
+_COMPARISONROWINFO = _descriptor.Descriptor(
+  name='ComparisonRowInfo',
+  full_name='ComparisonRowInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='category1', full_name='ComparisonRowInfo.category1', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='category2', full_name='ComparisonRowInfo.category2', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='values', full_name='ComparisonRowInfo.values', index=2,
+      number=3, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='p_value', full_name='ComparisonRowInfo.p_value', index=3,
+      number=4, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='p_value_is_group', full_name='ComparisonRowInfo.p_value_is_group', index=4,
+      number=5, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5048,
+  serialized_end=5164,
+)
+
+
+_RESPONSECOMPARISON = _descriptor.Descriptor(
+  name='ResponseComparison',
+  full_name='ResponseComparison',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='ResponseComparison.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='cohort_list', full_name='ResponseComparison.cohort_list', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='row_list', full_name='ResponseComparison.row_list', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5166,
+  serialized_end=5282,
 )
 
 _RESPONSECOHORTLIST.fields_by_name['cohort_list'].message_type = _COHORTINFO
-_PERSONINFO.oneofs_by_name['_month_of_birth'].fields.append(
-  _PERSONINFO.fields_by_name['month_of_birth'])
-_PERSONINFO.fields_by_name['month_of_birth'].containing_oneof = _PERSONINFO.oneofs_by_name['_month_of_birth']
-_PERSONINFO.oneofs_by_name['_day_of_birth'].fields.append(
-  _PERSONINFO.fields_by_name['day_of_birth'])
-_PERSONINFO.fields_by_name['day_of_birth'].containing_oneof = _PERSONINFO.oneofs_by_name['_day_of_birth']
-_PERSONINFO.oneofs_by_name['_birth_datetime'].fields.append(
-  _PERSONINFO.fields_by_name['birth_datetime'])
-_PERSONINFO.fields_by_name['birth_datetime'].containing_oneof = _PERSONINFO.oneofs_by_name['_birth_datetime']
-_PERSONINFO.oneofs_by_name['_location_id'].fields.append(
-  _PERSONINFO.fields_by_name['location_id'])
-_PERSONINFO.fields_by_name['location_id'].containing_oneof = _PERSONINFO.oneofs_by_name['_location_id']
-_PERSONINFO.oneofs_by_name['_provider_id'].fields.append(
-  _PERSONINFO.fields_by_name['provider_id'])
-_PERSONINFO.fields_by_name['provider_id'].containing_oneof = _PERSONINFO.oneofs_by_name['_provider_id']
-_PERSONINFO.oneofs_by_name['_care_site_id'].fields.append(
-  _PERSONINFO.fields_by_name['care_site_id'])
-_PERSONINFO.fields_by_name['care_site_id'].containing_oneof = _PERSONINFO.oneofs_by_name['_care_site_id']
-_PERSONINFO.oneofs_by_name['_person_source_value'].fields.append(
-  _PERSONINFO.fields_by_name['person_source_value'])
-_PERSONINFO.fields_by_name['person_source_value'].containing_oneof = _PERSONINFO.oneofs_by_name['_person_source_value']
-_PERSONINFO.oneofs_by_name['_gender_source_value'].fields.append(
-  _PERSONINFO.fields_by_name['gender_source_value'])
-_PERSONINFO.fields_by_name['gender_source_value'].containing_oneof = _PERSONINFO.oneofs_by_name['_gender_source_value']
-_PERSONINFO.oneofs_by_name['_gender_source_concept_id'].fields.append(
-  _PERSONINFO.fields_by_name['gender_source_concept_id'])
-_PERSONINFO.fields_by_name['gender_source_concept_id'].containing_oneof = _PERSONINFO.oneofs_by_name['_gender_source_concept_id']
-_PERSONINFO.oneofs_by_name['_race_source_value'].fields.append(
-  _PERSONINFO.fields_by_name['race_source_value'])
-_PERSONINFO.fields_by_name['race_source_value'].containing_oneof = _PERSONINFO.oneofs_by_name['_race_source_value']
-_PERSONINFO.oneofs_by_name['_race_source_concept_id'].fields.append(
-  _PERSONINFO.fields_by_name['race_source_concept_id'])
-_PERSONINFO.fields_by_name['race_source_concept_id'].containing_oneof = _PERSONINFO.oneofs_by_name['_race_source_concept_id']
-_PERSONINFO.oneofs_by_name['_ethnicity_source_value'].fields.append(
-  _PERSONINFO.fields_by_name['ethnicity_source_value'])
-_PERSONINFO.fields_by_name['ethnicity_source_value'].containing_oneof = _PERSONINFO.oneofs_by_name['_ethnicity_source_value']
-_PERSONINFO.oneofs_by_name['_ethnicity_source_concept_id'].fields.append(
-  _PERSONINFO.fields_by_name['ethnicity_source_concept_id'])
-_PERSONINFO.fields_by_name['ethnicity_source_concept_id'].containing_oneof = _PERSONINFO.oneofs_by_name['_ethnicity_source_concept_id']
-_CONDITIONOCCURRENCEINFO.oneofs_by_name['_condition_start_datetime'].fields.append(
-  _CONDITIONOCCURRENCEINFO.fields_by_name['condition_start_datetime'])
-_CONDITIONOCCURRENCEINFO.fields_by_name['condition_start_datetime'].containing_oneof = _CONDITIONOCCURRENCEINFO.oneofs_by_name['_condition_start_datetime']
-_CONDITIONOCCURRENCEINFO.oneofs_by_name['_condition_end_date'].fields.append(
-  _CONDITIONOCCURRENCEINFO.fields_by_name['condition_end_date'])
-_CONDITIONOCCURRENCEINFO.fields_by_name['condition_end_date'].containing_oneof = _CONDITIONOCCURRENCEINFO.oneofs_by_name['_condition_end_date']
-_CONDITIONOCCURRENCEINFO.oneofs_by_name['_condition_end_datetime'].fields.append(
-  _CONDITIONOCCURRENCEINFO.fields_by_name['condition_end_datetime'])
-_CONDITIONOCCURRENCEINFO.fields_by_name['condition_end_datetime'].containing_oneof = _CONDITIONOCCURRENCEINFO.oneofs_by_name['_condition_end_datetime']
-_CONDITIONOCCURRENCEINFO.oneofs_by_name['_condition_status_concept_id'].fields.append(
-  _CONDITIONOCCURRENCEINFO.fields_by_name['condition_status_concept_id'])
-_CONDITIONOCCURRENCEINFO.fields_by_name['condition_status_concept_id'].containing_oneof = _CONDITIONOCCURRENCEINFO.oneofs_by_name['_condition_status_concept_id']
-_CONDITIONOCCURRENCEINFO.oneofs_by_name['_stop_reason'].fields.append(
-  _CONDITIONOCCURRENCEINFO.fields_by_name['stop_reason'])
-_CONDITIONOCCURRENCEINFO.fields_by_name['stop_reason'].containing_oneof = _CONDITIONOCCURRENCEINFO.oneofs_by_name['_stop_reason']
-_CONDITIONOCCURRENCEINFO.oneofs_by_name['_provider_id'].fields.append(
-  _CONDITIONOCCURRENCEINFO.fields_by_name['provider_id'])
-_CONDITIONOCCURRENCEINFO.fields_by_name['provider_id'].containing_oneof = _CONDITIONOCCURRENCEINFO.oneofs_by_name['_provider_id']
-_CONDITIONOCCURRENCEINFO.oneofs_by_name['_visit_occurrence_id'].fields.append(
-  _CONDITIONOCCURRENCEINFO.fields_by_name['visit_occurrence_id'])
-_CONDITIONOCCURRENCEINFO.fields_by_name['visit_occurrence_id'].containing_oneof = _CONDITIONOCCURRENCEINFO.oneofs_by_name['_visit_occurrence_id']
-_CONDITIONOCCURRENCEINFO.oneofs_by_name['_visit_detail_id'].fields.append(
-  _CONDITIONOCCURRENCEINFO.fields_by_name['visit_detail_id'])
-_CONDITIONOCCURRENCEINFO.fields_by_name['visit_detail_id'].containing_oneof = _CONDITIONOCCURRENCEINFO.oneofs_by_name['_visit_detail_id']
-_CONDITIONOCCURRENCEINFO.oneofs_by_name['_condition_source_value'].fields.append(
-  _CONDITIONOCCURRENCEINFO.fields_by_name['condition_source_value'])
-_CONDITIONOCCURRENCEINFO.fields_by_name['condition_source_value'].containing_oneof = _CONDITIONOCCURRENCEINFO.oneofs_by_name['_condition_source_value']
-_CONDITIONOCCURRENCEINFO.oneofs_by_name['_condition_source_concept_id'].fields.append(
-  _CONDITIONOCCURRENCEINFO.fields_by_name['condition_source_concept_id'])
-_CONDITIONOCCURRENCEINFO.fields_by_name['condition_source_concept_id'].containing_oneof = _CONDITIONOCCURRENCEINFO.oneofs_by_name['_condition_source_concept_id']
-_CONDITIONOCCURRENCEINFO.oneofs_by_name['_condition_status_source_value'].fields.append(
-  _CONDITIONOCCURRENCEINFO.fields_by_name['condition_status_source_value'])
-_CONDITIONOCCURRENCEINFO.fields_by_name['condition_status_source_value'].containing_oneof = _CONDITIONOCCURRENCEINFO.oneofs_by_name['_condition_status_source_value']
-_DEATHINFO.oneofs_by_name['_death_datetime'].fields.append(
-  _DEATHINFO.fields_by_name['death_datetime'])
-_DEATHINFO.fields_by_name['death_datetime'].containing_oneof = _DEATHINFO.oneofs_by_name['_death_datetime']
-_DEATHINFO.oneofs_by_name['_death_type_concept_id'].fields.append(
-  _DEATHINFO.fields_by_name['death_type_concept_id'])
-_DEATHINFO.fields_by_name['death_type_concept_id'].containing_oneof = _DEATHINFO.oneofs_by_name['_death_type_concept_id']
-_DEATHINFO.oneofs_by_name['_cause_concept_id'].fields.append(
-  _DEATHINFO.fields_by_name['cause_concept_id'])
-_DEATHINFO.fields_by_name['cause_concept_id'].containing_oneof = _DEATHINFO.oneofs_by_name['_cause_concept_id']
-_DEATHINFO.oneofs_by_name['_cause_source_value'].fields.append(
-  _DEATHINFO.fields_by_name['cause_source_value'])
-_DEATHINFO.fields_by_name['cause_source_value'].containing_oneof = _DEATHINFO.oneofs_by_name['_cause_source_value']
-_DEATHINFO.oneofs_by_name['_cause_source_concept_id'].fields.append(
-  _DEATHINFO.fields_by_name['cause_source_concept_id'])
-_DEATHINFO.fields_by_name['cause_source_concept_id'].containing_oneof = _DEATHINFO.oneofs_by_name['_cause_source_concept_id']
-_DEVICEEXPOSUREINFO.oneofs_by_name['_device_exposure_start_datetime'].fields.append(
-  _DEVICEEXPOSUREINFO.fields_by_name['device_exposure_start_datetime'])
-_DEVICEEXPOSUREINFO.fields_by_name['device_exposure_start_datetime'].containing_oneof = _DEVICEEXPOSUREINFO.oneofs_by_name['_device_exposure_start_datetime']
-_DEVICEEXPOSUREINFO.oneofs_by_name['_device_exposure_end_date'].fields.append(
-  _DEVICEEXPOSUREINFO.fields_by_name['device_exposure_end_date'])
-_DEVICEEXPOSUREINFO.fields_by_name['device_exposure_end_date'].containing_oneof = _DEVICEEXPOSUREINFO.oneofs_by_name['_device_exposure_end_date']
-_DEVICEEXPOSUREINFO.oneofs_by_name['_device_exposure_end_datetime'].fields.append(
-  _DEVICEEXPOSUREINFO.fields_by_name['device_exposure_end_datetime'])
-_DEVICEEXPOSUREINFO.fields_by_name['device_exposure_end_datetime'].containing_oneof = _DEVICEEXPOSUREINFO.oneofs_by_name['_device_exposure_end_datetime']
-_DEVICEEXPOSUREINFO.oneofs_by_name['_unique_device_id'].fields.append(
-  _DEVICEEXPOSUREINFO.fields_by_name['unique_device_id'])
-_DEVICEEXPOSUREINFO.fields_by_name['unique_device_id'].containing_oneof = _DEVICEEXPOSUREINFO.oneofs_by_name['_unique_device_id']
-_DEVICEEXPOSUREINFO.oneofs_by_name['_quantity'].fields.append(
-  _DEVICEEXPOSUREINFO.fields_by_name['quantity'])
-_DEVICEEXPOSUREINFO.fields_by_name['quantity'].containing_oneof = _DEVICEEXPOSUREINFO.oneofs_by_name['_quantity']
-_DEVICEEXPOSUREINFO.oneofs_by_name['_provider_id'].fields.append(
-  _DEVICEEXPOSUREINFO.fields_by_name['provider_id'])
-_DEVICEEXPOSUREINFO.fields_by_name['provider_id'].containing_oneof = _DEVICEEXPOSUREINFO.oneofs_by_name['_provider_id']
-_DEVICEEXPOSUREINFO.oneofs_by_name['_visit_occurrence_id'].fields.append(
-  _DEVICEEXPOSUREINFO.fields_by_name['visit_occurrence_id'])
-_DEVICEEXPOSUREINFO.fields_by_name['visit_occurrence_id'].containing_oneof = _DEVICEEXPOSUREINFO.oneofs_by_name['_visit_occurrence_id']
-_DEVICEEXPOSUREINFO.oneofs_by_name['_visit_detail_id'].fields.append(
-  _DEVICEEXPOSUREINFO.fields_by_name['visit_detail_id'])
-_DEVICEEXPOSUREINFO.fields_by_name['visit_detail_id'].containing_oneof = _DEVICEEXPOSUREINFO.oneofs_by_name['_visit_detail_id']
-_DEVICEEXPOSUREINFO.oneofs_by_name['_device_source_value'].fields.append(
-  _DEVICEEXPOSUREINFO.fields_by_name['device_source_value'])
-_DEVICEEXPOSUREINFO.fields_by_name['device_source_value'].containing_oneof = _DEVICEEXPOSUREINFO.oneofs_by_name['_device_source_value']
-_DEVICEEXPOSUREINFO.oneofs_by_name['_device_source_concept_id'].fields.append(
-  _DEVICEEXPOSUREINFO.fields_by_name['device_source_concept_id'])
-_DEVICEEXPOSUREINFO.fields_by_name['device_source_concept_id'].containing_oneof = _DEVICEEXPOSUREINFO.oneofs_by_name['_device_source_concept_id']
-_DRUGEXPOSUREINFO.oneofs_by_name['_drug_exposure_start_datetime'].fields.append(
-  _DRUGEXPOSUREINFO.fields_by_name['drug_exposure_start_datetime'])
-_DRUGEXPOSUREINFO.fields_by_name['drug_exposure_start_datetime'].containing_oneof = _DRUGEXPOSUREINFO.oneofs_by_name['_drug_exposure_start_datetime']
-_DRUGEXPOSUREINFO.oneofs_by_name['_drug_exposure_end_datetime'].fields.append(
-  _DRUGEXPOSUREINFO.fields_by_name['drug_exposure_end_datetime'])
-_DRUGEXPOSUREINFO.fields_by_name['drug_exposure_end_datetime'].containing_oneof = _DRUGEXPOSUREINFO.oneofs_by_name['_drug_exposure_end_datetime']
-_DRUGEXPOSUREINFO.oneofs_by_name['_verbatim_end_date'].fields.append(
-  _DRUGEXPOSUREINFO.fields_by_name['verbatim_end_date'])
-_DRUGEXPOSUREINFO.fields_by_name['verbatim_end_date'].containing_oneof = _DRUGEXPOSUREINFO.oneofs_by_name['_verbatim_end_date']
-_DRUGEXPOSUREINFO.oneofs_by_name['_stop_reason'].fields.append(
-  _DRUGEXPOSUREINFO.fields_by_name['stop_reason'])
-_DRUGEXPOSUREINFO.fields_by_name['stop_reason'].containing_oneof = _DRUGEXPOSUREINFO.oneofs_by_name['_stop_reason']
-_DRUGEXPOSUREINFO.oneofs_by_name['_refills'].fields.append(
-  _DRUGEXPOSUREINFO.fields_by_name['refills'])
-_DRUGEXPOSUREINFO.fields_by_name['refills'].containing_oneof = _DRUGEXPOSUREINFO.oneofs_by_name['_refills']
-_DRUGEXPOSUREINFO.oneofs_by_name['_quantity'].fields.append(
-  _DRUGEXPOSUREINFO.fields_by_name['quantity'])
-_DRUGEXPOSUREINFO.fields_by_name['quantity'].containing_oneof = _DRUGEXPOSUREINFO.oneofs_by_name['_quantity']
-_DRUGEXPOSUREINFO.oneofs_by_name['_days_supply'].fields.append(
-  _DRUGEXPOSUREINFO.fields_by_name['days_supply'])
-_DRUGEXPOSUREINFO.fields_by_name['days_supply'].containing_oneof = _DRUGEXPOSUREINFO.oneofs_by_name['_days_supply']
-_DRUGEXPOSUREINFO.oneofs_by_name['_sig'].fields.append(
-  _DRUGEXPOSUREINFO.fields_by_name['sig'])
-_DRUGEXPOSUREINFO.fields_by_name['sig'].containing_oneof = _DRUGEXPOSUREINFO.oneofs_by_name['_sig']
-_DRUGEXPOSUREINFO.oneofs_by_name['_route_concept_id'].fields.append(
-  _DRUGEXPOSUREINFO.fields_by_name['route_concept_id'])
-_DRUGEXPOSUREINFO.fields_by_name['route_concept_id'].containing_oneof = _DRUGEXPOSUREINFO.oneofs_by_name['_route_concept_id']
-_DRUGEXPOSUREINFO.oneofs_by_name['_lot_number'].fields.append(
-  _DRUGEXPOSUREINFO.fields_by_name['lot_number'])
-_DRUGEXPOSUREINFO.fields_by_name['lot_number'].containing_oneof = _DRUGEXPOSUREINFO.oneofs_by_name['_lot_number']
-_DRUGEXPOSUREINFO.oneofs_by_name['_provider_id'].fields.append(
-  _DRUGEXPOSUREINFO.fields_by_name['provider_id'])
-_DRUGEXPOSUREINFO.fields_by_name['provider_id'].containing_oneof = _DRUGEXPOSUREINFO.oneofs_by_name['_provider_id']
-_DRUGEXPOSUREINFO.oneofs_by_name['_visit_occurrence_id'].fields.append(
-  _DRUGEXPOSUREINFO.fields_by_name['visit_occurrence_id'])
-_DRUGEXPOSUREINFO.fields_by_name['visit_occurrence_id'].containing_oneof = _DRUGEXPOSUREINFO.oneofs_by_name['_visit_occurrence_id']
-_DRUGEXPOSUREINFO.oneofs_by_name['_visit_detail_id'].fields.append(
-  _DRUGEXPOSUREINFO.fields_by_name['visit_detail_id'])
-_DRUGEXPOSUREINFO.fields_by_name['visit_detail_id'].containing_oneof = _DRUGEXPOSUREINFO.oneofs_by_name['_visit_detail_id']
-_DRUGEXPOSUREINFO.oneofs_by_name['_drug_source_value'].fields.append(
-  _DRUGEXPOSUREINFO.fields_by_name['drug_source_value'])
-_DRUGEXPOSUREINFO.fields_by_name['drug_source_value'].containing_oneof = _DRUGEXPOSUREINFO.oneofs_by_name['_drug_source_value']
-_DRUGEXPOSUREINFO.oneofs_by_name['_drug_source_concept_id'].fields.append(
-  _DRUGEXPOSUREINFO.fields_by_name['drug_source_concept_id'])
-_DRUGEXPOSUREINFO.fields_by_name['drug_source_concept_id'].containing_oneof = _DRUGEXPOSUREINFO.oneofs_by_name['_drug_source_concept_id']
-_DRUGEXPOSUREINFO.oneofs_by_name['_route_source_value'].fields.append(
-  _DRUGEXPOSUREINFO.fields_by_name['route_source_value'])
-_DRUGEXPOSUREINFO.fields_by_name['route_source_value'].containing_oneof = _DRUGEXPOSUREINFO.oneofs_by_name['_route_source_value']
-_DRUGEXPOSUREINFO.oneofs_by_name['_dose_unit_source_value'].fields.append(
-  _DRUGEXPOSUREINFO.fields_by_name['dose_unit_source_value'])
-_DRUGEXPOSUREINFO.fields_by_name['dose_unit_source_value'].containing_oneof = _DRUGEXPOSUREINFO.oneofs_by_name['_dose_unit_source_value']
-_MEASUREMENTINFO.oneofs_by_name['_measurement_datetime'].fields.append(
-  _MEASUREMENTINFO.fields_by_name['measurement_datetime'])
-_MEASUREMENTINFO.fields_by_name['measurement_datetime'].containing_oneof = _MEASUREMENTINFO.oneofs_by_name['_measurement_datetime']
-_MEASUREMENTINFO.oneofs_by_name['_measurement_time'].fields.append(
-  _MEASUREMENTINFO.fields_by_name['measurement_time'])
-_MEASUREMENTINFO.fields_by_name['measurement_time'].containing_oneof = _MEASUREMENTINFO.oneofs_by_name['_measurement_time']
-_MEASUREMENTINFO.oneofs_by_name['_operator_concept_id'].fields.append(
-  _MEASUREMENTINFO.fields_by_name['operator_concept_id'])
-_MEASUREMENTINFO.fields_by_name['operator_concept_id'].containing_oneof = _MEASUREMENTINFO.oneofs_by_name['_operator_concept_id']
-_MEASUREMENTINFO.oneofs_by_name['_value_as_number'].fields.append(
-  _MEASUREMENTINFO.fields_by_name['value_as_number'])
-_MEASUREMENTINFO.fields_by_name['value_as_number'].containing_oneof = _MEASUREMENTINFO.oneofs_by_name['_value_as_number']
-_MEASUREMENTINFO.oneofs_by_name['_value_as_concept_id'].fields.append(
-  _MEASUREMENTINFO.fields_by_name['value_as_concept_id'])
-_MEASUREMENTINFO.fields_by_name['value_as_concept_id'].containing_oneof = _MEASUREMENTINFO.oneofs_by_name['_value_as_concept_id']
-_MEASUREMENTINFO.oneofs_by_name['_unit_concept_id'].fields.append(
-  _MEASUREMENTINFO.fields_by_name['unit_concept_id'])
-_MEASUREMENTINFO.fields_by_name['unit_concept_id'].containing_oneof = _MEASUREMENTINFO.oneofs_by_name['_unit_concept_id']
-_MEASUREMENTINFO.oneofs_by_name['_range_low'].fields.append(
-  _MEASUREMENTINFO.fields_by_name['range_low'])
-_MEASUREMENTINFO.fields_by_name['range_low'].containing_oneof = _MEASUREMENTINFO.oneofs_by_name['_range_low']
-_MEASUREMENTINFO.oneofs_by_name['_range_high'].fields.append(
-  _MEASUREMENTINFO.fields_by_name['range_high'])
-_MEASUREMENTINFO.fields_by_name['range_high'].containing_oneof = _MEASUREMENTINFO.oneofs_by_name['_range_high']
-_MEASUREMENTINFO.oneofs_by_name['_provider_id'].fields.append(
-  _MEASUREMENTINFO.fields_by_name['provider_id'])
-_MEASUREMENTINFO.fields_by_name['provider_id'].containing_oneof = _MEASUREMENTINFO.oneofs_by_name['_provider_id']
-_MEASUREMENTINFO.oneofs_by_name['_visit_occurrence_id'].fields.append(
-  _MEASUREMENTINFO.fields_by_name['visit_occurrence_id'])
-_MEASUREMENTINFO.fields_by_name['visit_occurrence_id'].containing_oneof = _MEASUREMENTINFO.oneofs_by_name['_visit_occurrence_id']
-_MEASUREMENTINFO.oneofs_by_name['_visit_detail_id'].fields.append(
-  _MEASUREMENTINFO.fields_by_name['visit_detail_id'])
-_MEASUREMENTINFO.fields_by_name['visit_detail_id'].containing_oneof = _MEASUREMENTINFO.oneofs_by_name['_visit_detail_id']
-_MEASUREMENTINFO.oneofs_by_name['_measurement_source_value'].fields.append(
-  _MEASUREMENTINFO.fields_by_name['measurement_source_value'])
-_MEASUREMENTINFO.fields_by_name['measurement_source_value'].containing_oneof = _MEASUREMENTINFO.oneofs_by_name['_measurement_source_value']
-_MEASUREMENTINFO.oneofs_by_name['_measurement_source_concept_id'].fields.append(
-  _MEASUREMENTINFO.fields_by_name['measurement_source_concept_id'])
-_MEASUREMENTINFO.fields_by_name['measurement_source_concept_id'].containing_oneof = _MEASUREMENTINFO.oneofs_by_name['_measurement_source_concept_id']
-_MEASUREMENTINFO.oneofs_by_name['_unit_source_value'].fields.append(
-  _MEASUREMENTINFO.fields_by_name['unit_source_value'])
-_MEASUREMENTINFO.fields_by_name['unit_source_value'].containing_oneof = _MEASUREMENTINFO.oneofs_by_name['_unit_source_value']
-_MEASUREMENTINFO.oneofs_by_name['_value_source_value'].fields.append(
-  _MEASUREMENTINFO.fields_by_name['value_source_value'])
-_MEASUREMENTINFO.fields_by_name['value_source_value'].containing_oneof = _MEASUREMENTINFO.oneofs_by_name['_value_source_value']
-_OBSERVATIONINFO.oneofs_by_name['_observation_datetime'].fields.append(
-  _OBSERVATIONINFO.fields_by_name['observation_datetime'])
-_OBSERVATIONINFO.fields_by_name['observation_datetime'].containing_oneof = _OBSERVATIONINFO.oneofs_by_name['_observation_datetime']
-_OBSERVATIONINFO.oneofs_by_name['_value_as_number'].fields.append(
-  _OBSERVATIONINFO.fields_by_name['value_as_number'])
-_OBSERVATIONINFO.fields_by_name['value_as_number'].containing_oneof = _OBSERVATIONINFO.oneofs_by_name['_value_as_number']
-_OBSERVATIONINFO.oneofs_by_name['_value_as_string'].fields.append(
-  _OBSERVATIONINFO.fields_by_name['value_as_string'])
-_OBSERVATIONINFO.fields_by_name['value_as_string'].containing_oneof = _OBSERVATIONINFO.oneofs_by_name['_value_as_string']
-_OBSERVATIONINFO.oneofs_by_name['_value_as_concept_id'].fields.append(
-  _OBSERVATIONINFO.fields_by_name['value_as_concept_id'])
-_OBSERVATIONINFO.fields_by_name['value_as_concept_id'].containing_oneof = _OBSERVATIONINFO.oneofs_by_name['_value_as_concept_id']
-_OBSERVATIONINFO.oneofs_by_name['_qualifier_concept_id'].fields.append(
-  _OBSERVATIONINFO.fields_by_name['qualifier_concept_id'])
-_OBSERVATIONINFO.fields_by_name['qualifier_concept_id'].containing_oneof = _OBSERVATIONINFO.oneofs_by_name['_qualifier_concept_id']
-_OBSERVATIONINFO.oneofs_by_name['_unit_concept_id'].fields.append(
-  _OBSERVATIONINFO.fields_by_name['unit_concept_id'])
-_OBSERVATIONINFO.fields_by_name['unit_concept_id'].containing_oneof = _OBSERVATIONINFO.oneofs_by_name['_unit_concept_id']
-_OBSERVATIONINFO.oneofs_by_name['_provider_id'].fields.append(
-  _OBSERVATIONINFO.fields_by_name['provider_id'])
-_OBSERVATIONINFO.fields_by_name['provider_id'].containing_oneof = _OBSERVATIONINFO.oneofs_by_name['_provider_id']
-_OBSERVATIONINFO.oneofs_by_name['_visit_occurrence_id'].fields.append(
-  _OBSERVATIONINFO.fields_by_name['visit_occurrence_id'])
-_OBSERVATIONINFO.fields_by_name['visit_occurrence_id'].containing_oneof = _OBSERVATIONINFO.oneofs_by_name['_visit_occurrence_id']
-_OBSERVATIONINFO.oneofs_by_name['_visit_detail_id'].fields.append(
-  _OBSERVATIONINFO.fields_by_name['visit_detail_id'])
-_OBSERVATIONINFO.fields_by_name['visit_detail_id'].containing_oneof = _OBSERVATIONINFO.oneofs_by_name['_visit_detail_id']
-_OBSERVATIONINFO.oneofs_by_name['_observation_source_value'].fields.append(
-  _OBSERVATIONINFO.fields_by_name['observation_source_value'])
-_OBSERVATIONINFO.fields_by_name['observation_source_value'].containing_oneof = _OBSERVATIONINFO.oneofs_by_name['_observation_source_value']
-_OBSERVATIONINFO.oneofs_by_name['_observation_source_concept_id'].fields.append(
-  _OBSERVATIONINFO.fields_by_name['observation_source_concept_id'])
-_OBSERVATIONINFO.fields_by_name['observation_source_concept_id'].containing_oneof = _OBSERVATIONINFO.oneofs_by_name['_observation_source_concept_id']
-_OBSERVATIONINFO.oneofs_by_name['_unit_source_value'].fields.append(
-  _OBSERVATIONINFO.fields_by_name['unit_source_value'])
-_OBSERVATIONINFO.fields_by_name['unit_source_value'].containing_oneof = _OBSERVATIONINFO.oneofs_by_name['_unit_source_value']
-_OBSERVATIONINFO.oneofs_by_name['_qualifier_source_value'].fields.append(
-  _OBSERVATIONINFO.fields_by_name['qualifier_source_value'])
-_OBSERVATIONINFO.fields_by_name['qualifier_source_value'].containing_oneof = _OBSERVATIONINFO.oneofs_by_name['_qualifier_source_value']
-_PROCEDUREOCCURRENCEINFO.oneofs_by_name['_procedure_datetime'].fields.append(
-  _PROCEDUREOCCURRENCEINFO.fields_by_name['procedure_datetime'])
-_PROCEDUREOCCURRENCEINFO.fields_by_name['procedure_datetime'].containing_oneof = _PROCEDUREOCCURRENCEINFO.oneofs_by_name['_procedure_datetime']
-_PROCEDUREOCCURRENCEINFO.oneofs_by_name['_modifier_concept_id'].fields.append(
-  _PROCEDUREOCCURRENCEINFO.fields_by_name['modifier_concept_id'])
-_PROCEDUREOCCURRENCEINFO.fields_by_name['modifier_concept_id'].containing_oneof = _PROCEDUREOCCURRENCEINFO.oneofs_by_name['_modifier_concept_id']
-_PROCEDUREOCCURRENCEINFO.oneofs_by_name['_quantity'].fields.append(
-  _PROCEDUREOCCURRENCEINFO.fields_by_name['quantity'])
-_PROCEDUREOCCURRENCEINFO.fields_by_name['quantity'].containing_oneof = _PROCEDUREOCCURRENCEINFO.oneofs_by_name['_quantity']
-_PROCEDUREOCCURRENCEINFO.oneofs_by_name['_provider_id'].fields.append(
-  _PROCEDUREOCCURRENCEINFO.fields_by_name['provider_id'])
-_PROCEDUREOCCURRENCEINFO.fields_by_name['provider_id'].containing_oneof = _PROCEDUREOCCURRENCEINFO.oneofs_by_name['_provider_id']
-_PROCEDUREOCCURRENCEINFO.oneofs_by_name['_visit_occurrence_id'].fields.append(
-  _PROCEDUREOCCURRENCEINFO.fields_by_name['visit_occurrence_id'])
-_PROCEDUREOCCURRENCEINFO.fields_by_name['visit_occurrence_id'].containing_oneof = _PROCEDUREOCCURRENCEINFO.oneofs_by_name['_visit_occurrence_id']
-_PROCEDUREOCCURRENCEINFO.oneofs_by_name['_visit_detail_id'].fields.append(
-  _PROCEDUREOCCURRENCEINFO.fields_by_name['visit_detail_id'])
-_PROCEDUREOCCURRENCEINFO.fields_by_name['visit_detail_id'].containing_oneof = _PROCEDUREOCCURRENCEINFO.oneofs_by_name['_visit_detail_id']
-_PROCEDUREOCCURRENCEINFO.oneofs_by_name['_procedure_source_value'].fields.append(
-  _PROCEDUREOCCURRENCEINFO.fields_by_name['procedure_source_value'])
-_PROCEDUREOCCURRENCEINFO.fields_by_name['procedure_source_value'].containing_oneof = _PROCEDUREOCCURRENCEINFO.oneofs_by_name['_procedure_source_value']
-_PROCEDUREOCCURRENCEINFO.oneofs_by_name['_procedure_source_concept_id'].fields.append(
-  _PROCEDUREOCCURRENCEINFO.fields_by_name['procedure_source_concept_id'])
-_PROCEDUREOCCURRENCEINFO.fields_by_name['procedure_source_concept_id'].containing_oneof = _PROCEDUREOCCURRENCEINFO.oneofs_by_name['_procedure_source_concept_id']
-_PROCEDUREOCCURRENCEINFO.oneofs_by_name['_modifier_source_value'].fields.append(
-  _PROCEDUREOCCURRENCEINFO.fields_by_name['modifier_source_value'])
-_PROCEDUREOCCURRENCEINFO.fields_by_name['modifier_source_value'].containing_oneof = _PROCEDUREOCCURRENCEINFO.oneofs_by_name['_modifier_source_value']
-_VISITOCCURRENCEINFO.oneofs_by_name['_visit_start_datetime'].fields.append(
-  _VISITOCCURRENCEINFO.fields_by_name['visit_start_datetime'])
-_VISITOCCURRENCEINFO.fields_by_name['visit_start_datetime'].containing_oneof = _VISITOCCURRENCEINFO.oneofs_by_name['_visit_start_datetime']
-_VISITOCCURRENCEINFO.oneofs_by_name['_visit_end_datetime'].fields.append(
-  _VISITOCCURRENCEINFO.fields_by_name['visit_end_datetime'])
-_VISITOCCURRENCEINFO.fields_by_name['visit_end_datetime'].containing_oneof = _VISITOCCURRENCEINFO.oneofs_by_name['_visit_end_datetime']
-_VISITOCCURRENCEINFO.oneofs_by_name['_provider_id'].fields.append(
-  _VISITOCCURRENCEINFO.fields_by_name['provider_id'])
-_VISITOCCURRENCEINFO.fields_by_name['provider_id'].containing_oneof = _VISITOCCURRENCEINFO.oneofs_by_name['_provider_id']
-_VISITOCCURRENCEINFO.oneofs_by_name['_care_site_id'].fields.append(
-  _VISITOCCURRENCEINFO.fields_by_name['care_site_id'])
-_VISITOCCURRENCEINFO.fields_by_name['care_site_id'].containing_oneof = _VISITOCCURRENCEINFO.oneofs_by_name['_care_site_id']
-_VISITOCCURRENCEINFO.oneofs_by_name['_visit_source_value'].fields.append(
-  _VISITOCCURRENCEINFO.fields_by_name['visit_source_value'])
-_VISITOCCURRENCEINFO.fields_by_name['visit_source_value'].containing_oneof = _VISITOCCURRENCEINFO.oneofs_by_name['_visit_source_value']
-_VISITOCCURRENCEINFO.oneofs_by_name['_visit_source_concept_id'].fields.append(
-  _VISITOCCURRENCEINFO.fields_by_name['visit_source_concept_id'])
-_VISITOCCURRENCEINFO.fields_by_name['visit_source_concept_id'].containing_oneof = _VISITOCCURRENCEINFO.oneofs_by_name['_visit_source_concept_id']
-_VISITOCCURRENCEINFO.oneofs_by_name['_admitting_source_concept_id'].fields.append(
-  _VISITOCCURRENCEINFO.fields_by_name['admitting_source_concept_id'])
-_VISITOCCURRENCEINFO.fields_by_name['admitting_source_concept_id'].containing_oneof = _VISITOCCURRENCEINFO.oneofs_by_name['_admitting_source_concept_id']
-_VISITOCCURRENCEINFO.oneofs_by_name['_admitting_source_value'].fields.append(
-  _VISITOCCURRENCEINFO.fields_by_name['admitting_source_value'])
-_VISITOCCURRENCEINFO.fields_by_name['admitting_source_value'].containing_oneof = _VISITOCCURRENCEINFO.oneofs_by_name['_admitting_source_value']
-_VISITOCCURRENCEINFO.oneofs_by_name['_discharge_to_concept_id'].fields.append(
-  _VISITOCCURRENCEINFO.fields_by_name['discharge_to_concept_id'])
-_VISITOCCURRENCEINFO.fields_by_name['discharge_to_concept_id'].containing_oneof = _VISITOCCURRENCEINFO.oneofs_by_name['_discharge_to_concept_id']
-_VISITOCCURRENCEINFO.oneofs_by_name['_discharge_to_source_value'].fields.append(
-  _VISITOCCURRENCEINFO.fields_by_name['discharge_to_source_value'])
-_VISITOCCURRENCEINFO.fields_by_name['discharge_to_source_value'].containing_oneof = _VISITOCCURRENCEINFO.oneofs_by_name['_discharge_to_source_value']
-_VISITOCCURRENCEINFO.oneofs_by_name['_preceding_visit_occurrence_id'].fields.append(
-  _VISITOCCURRENCEINFO.fields_by_name['preceding_visit_occurrence_id'])
-_VISITOCCURRENCEINFO.fields_by_name['preceding_visit_occurrence_id'].containing_oneof = _VISITOCCURRENCEINFO.oneofs_by_name['_preceding_visit_occurrence_id']
+_RESPONSECOMPARISON.fields_by_name['cohort_list'].message_type = _COMPARISONCOHORTINFO
+_RESPONSECOMPARISON.fields_by_name['row_list'].message_type = _COMPARISONROWINFO
 DESCRIPTOR.message_types_by_name['RequestLogin'] = _REQUESTLOGIN
 DESCRIPTOR.message_types_by_name['ResponseLogin'] = _RESPONSELOGIN
 DESCRIPTOR.message_types_by_name['RequestCohortList'] = _REQUESTCOHORTLIST
@@ -2463,6 +1817,10 @@ DESCRIPTOR.message_types_by_name['ObservationPeriodInfo'] = _OBSERVATIONPERIODIN
 DESCRIPTOR.message_types_by_name['ObservationInfo'] = _OBSERVATIONINFO
 DESCRIPTOR.message_types_by_name['ProcedureOccurrenceInfo'] = _PROCEDUREOCCURRENCEINFO
 DESCRIPTOR.message_types_by_name['VisitOccurrenceInfo'] = _VISITOCCURRENCEINFO
+DESCRIPTOR.message_types_by_name['RequestComparison'] = _REQUESTCOMPARISON
+DESCRIPTOR.message_types_by_name['ComparisonCohortInfo'] = _COMPARISONCOHORTINFO
+DESCRIPTOR.message_types_by_name['ComparisonRowInfo'] = _COMPARISONROWINFO
+DESCRIPTOR.message_types_by_name['ResponseComparison'] = _RESPONSECOMPARISON
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 RequestLogin = _reflection.GeneratedProtocolMessageType('RequestLogin', (_message.Message,), {
@@ -2577,6 +1935,34 @@ VisitOccurrenceInfo = _reflection.GeneratedProtocolMessageType('VisitOccurrenceI
   })
 _sym_db.RegisterMessage(VisitOccurrenceInfo)
 
+RequestComparison = _reflection.GeneratedProtocolMessageType('RequestComparison', (_message.Message,), {
+  'DESCRIPTOR' : _REQUESTCOMPARISON,
+  '__module__' : 'clue_pb2'
+  # @@protoc_insertion_point(class_scope:RequestComparison)
+  })
+_sym_db.RegisterMessage(RequestComparison)
+
+ComparisonCohortInfo = _reflection.GeneratedProtocolMessageType('ComparisonCohortInfo', (_message.Message,), {
+  'DESCRIPTOR' : _COMPARISONCOHORTINFO,
+  '__module__' : 'clue_pb2'
+  # @@protoc_insertion_point(class_scope:ComparisonCohortInfo)
+  })
+_sym_db.RegisterMessage(ComparisonCohortInfo)
+
+ComparisonRowInfo = _reflection.GeneratedProtocolMessageType('ComparisonRowInfo', (_message.Message,), {
+  'DESCRIPTOR' : _COMPARISONROWINFO,
+  '__module__' : 'clue_pb2'
+  # @@protoc_insertion_point(class_scope:ComparisonRowInfo)
+  })
+_sym_db.RegisterMessage(ComparisonRowInfo)
+
+ResponseComparison = _reflection.GeneratedProtocolMessageType('ResponseComparison', (_message.Message,), {
+  'DESCRIPTOR' : _RESPONSECOMPARISON,
+  '__module__' : 'clue_pb2'
+  # @@protoc_insertion_point(class_scope:ResponseComparison)
+  })
+_sym_db.RegisterMessage(ResponseComparison)
+
 
 
 _CLUE = _descriptor.ServiceDescriptor(
@@ -2586,8 +1972,8 @@ _CLUE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=7854,
-  serialized_end=8754,
+  serialized_start=5285,
+  serialized_end=6251,
   methods=[
   _descriptor.MethodDescriptor(
     name='AuthLogin',
@@ -2706,6 +2092,16 @@ _CLUE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_REQUESTCOHORTSTREAM,
     output_type=_VISITOCCURRENCEINFO,
+    serialized_options=None,
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetCohortComparison',
+    full_name='CLUE.GetCohortComparison',
+    index=12,
+    containing_service=None,
+    input_type=_REQUESTCOMPARISON,
+    output_type=_RESPONSECOMPARISON,
     serialized_options=None,
     create_key=_descriptor._internal_create_key,
   ),
