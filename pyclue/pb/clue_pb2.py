@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\nclue.proto\"/\n\x0cRequestLogin\x12\r\n\x05\x65mail\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"<\n\rResponseLogin\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x15\n\rrefresh_token\x18\x02 \x01(\t\"?\n\x11RequestCohortList\x12\x0c\n\x04term\x18\x01 \x01(\t\x12\x0c\n\x04page\x18\x02 \x01(\x05\x12\x0e\n\x06length\x18\x03 \x01(\x05\"\x86\x01\n\nCohortInfo\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x16\n\x0egenerated_time\x18\x03 \x01(\t\x12\x14\n\x0cperson_count\x18\x04 \x01(\x05\x12\x0c\n\x04\x64one\x18\x05 \x01(\t\x12\x13\n\x0bupdate_flag\x18\x06 \x01(\x05\x12\r\n\x05state\x18\x07 \x01(\x05\"6\n\x12ResponseCohortList\x12 \n\x0b\x63ohort_list\x18\x01 \x03(\x0b\x32\x0b.CohortInfo\";\n\x13RequestCohortStream\x12\x11\n\tfetch_num\x18\x01 \x01(\x05\x12\x11\n\tcohort_id\x18\x02 \x01(\x05\"\xea\x03\n\nPersonInfo\x12\x11\n\tperson_id\x18\x01 \x01(\x05\x12\x19\n\x11gender_concept_id\x18\x02 \x01(\x05\x12\x15\n\ryear_of_birth\x18\x03 \x01(\x05\x12\x17\n\x0frace_concept_id\x18\x04 \x01(\x05\x12\x1c\n\x14\x65thnicity_concept_id\x18\x05 \x01(\x05\x12\x16\n\x0emonth_of_birth\x18\x06 \x01(\x05\x12\x14\n\x0c\x64\x61y_of_birth\x18\x07 \x01(\x05\x12\x16\n\x0e\x62irth_datetime\x18\x08 \x01(\t\x12\x13\n\x0blocation_id\x18\t \x01(\x05\x12\x13\n\x0bprovider_id\x18\n \x01(\x05\x12\x14\n\x0c\x63\x61re_site_id\x18\x0b \x01(\x05\x12\x1b\n\x13person_source_value\x18\x0c \x01(\t\x12\x1b\n\x13gender_source_value\x18\r \x01(\t\x12 \n\x18gender_source_concept_id\x18\x0e \x01(\x05\x12\x19\n\x11race_source_value\x18\x0f \x01(\t\x12\x1e\n\x16race_source_concept_id\x18\x10 \x01(\x05\x12\x1e\n\x16\x65thnicity_source_value\x18\x11 \x01(\t\x12#\n\x1b\x65thnicity_source_concept_id\x18\x12 \x01(\x05\"\xfb\x03\n\x17\x43onditionOccurrenceInfo\x12\x1f\n\x17\x63ondition_occurrence_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x1c\n\x14\x63ondition_concept_id\x18\x03 \x01(\x05\x12\x1c\n\x14\x63ondition_start_date\x18\x04 \x01(\t\x12!\n\x19\x63ondition_type_concept_id\x18\x05 \x01(\x05\x12 \n\x18\x63ondition_start_datetime\x18\x06 \x01(\t\x12\x1a\n\x12\x63ondition_end_date\x18\x07 \x01(\t\x12\x1e\n\x16\x63ondition_end_datetime\x18\x08 \x01(\t\x12#\n\x1b\x63ondition_status_concept_id\x18\t \x01(\x05\x12\x13\n\x0bstop_reason\x18\n \x01(\t\x12\x13\n\x0bprovider_id\x18\x0b \x01(\x05\x12\x1b\n\x13visit_occurrence_id\x18\x0c \x01(\x05\x12\x17\n\x0fvisit_detail_id\x18\r \x01(\x05\x12\x1e\n\x16\x63ondition_source_value\x18\x0e \x01(\t\x12#\n\x1b\x63ondition_source_concept_id\x18\x0f \x01(\x05\x12%\n\x1d\x63ondition_status_source_value\x18\x10 \x01(\t\"\xc0\x01\n\tDeathInfo\x12\x11\n\tperson_id\x18\x01 \x01(\x05\x12\x12\n\ndeath_date\x18\x02 \x01(\t\x12\x16\n\x0e\x64\x65\x61th_datetime\x18\x03 \x01(\t\x12\x1d\n\x15\x64\x65\x61th_type_concept_id\x18\x04 \x01(\x05\x12\x18\n\x10\x63\x61use_concept_id\x18\x05 \x01(\t\x12\x1a\n\x12\x63\x61use_source_value\x18\x06 \x01(\t\x12\x1f\n\x17\x63\x61use_source_concept_id\x18\x07 \x01(\x05\"\xc8\x03\n\x12\x44\x65viceExposureInfo\x12\x1a\n\x12\x64\x65vice_exposure_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x19\n\x11\x64\x65vice_concept_id\x18\x03 \x01(\x05\x12\"\n\x1a\x64\x65vice_exposure_start_date\x18\x04 \x01(\t\x12\x1e\n\x16\x64\x65vice_type_concept_id\x18\x05 \x01(\x05\x12&\n\x1e\x64\x65vice_exposure_start_datetime\x18\x06 \x01(\t\x12 \n\x18\x64\x65vice_exposure_end_date\x18\x07 \x01(\t\x12$\n\x1c\x64\x65vice_exposure_end_datetime\x18\x08 \x01(\t\x12\x18\n\x10unique_device_id\x18\t \x01(\t\x12\x10\n\x08quantity\x18\n \x01(\x05\x12\x13\n\x0bprovider_id\x18\x0b \x01(\x05\x12\x1b\n\x13visit_occurrence_id\x18\x0c \x01(\x05\x12\x17\n\x0fvisit_detail_id\x18\r \x01(\x05\x12\x1b\n\x13\x64\x65vice_source_value\x18\x0e \x01(\t\x12 \n\x18\x64\x65vice_source_concept_id\x18\x0f \x01(\x05\"\xe7\x04\n\x10\x44rugExposureInfo\x12\x18\n\x10\x64rug_exposure_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x17\n\x0f\x64rug_concept_id\x18\x03 \x01(\x05\x12 \n\x18\x64rug_exposure_start_date\x18\x04 \x01(\t\x12\x1e\n\x16\x64rug_exposure_end_date\x18\x05 \x01(\t\x12\x1c\n\x14\x64rug_type_concept_id\x18\x06 \x01(\x05\x12$\n\x1c\x64rug_exposure_start_datetime\x18\x07 \x01(\t\x12\"\n\x1a\x64rug_exposure_end_datetime\x18\x08 \x01(\t\x12\x19\n\x11verbatim_end_date\x18\t \x01(\t\x12\x13\n\x0bstop_reason\x18\n \x01(\t\x12\x0f\n\x07refills\x18\x0b \x01(\x05\x12\x10\n\x08quantity\x18\x0c \x01(\x02\x12\x13\n\x0b\x64\x61ys_supply\x18\r \x01(\x05\x12\x0b\n\x03sig\x18\x0e \x01(\t\x12\x18\n\x10route_concept_id\x18\x0f \x01(\x05\x12\x12\n\nlot_number\x18\x10 \x01(\t\x12\x13\n\x0bprovider_id\x18\x11 \x01(\x05\x12\x1b\n\x13visit_occurrence_id\x18\x12 \x01(\x05\x12\x17\n\x0fvisit_detail_id\x18\x13 \x01(\x05\x12\x19\n\x11\x64rug_source_value\x18\x14 \x01(\t\x12\x1e\n\x16\x64rug_source_concept_id\x18\x15 \x01(\x05\x12\x1a\n\x12route_source_value\x18\x16 \x01(\t\x12\x1e\n\x16\x64ose_unit_source_value\x18\x17 \x01(\t\"\xb1\x04\n\x0fMeasurementInfo\x12\x16\n\x0emeasurement_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x1e\n\x16measurement_concept_id\x18\x03 \x01(\x05\x12\x18\n\x10measurement_date\x18\x04 \x01(\t\x12#\n\x1bmeasurement_type_concept_id\x18\x05 \x01(\x05\x12\x1c\n\x14measurement_datetime\x18\x06 \x01(\t\x12\x18\n\x10measurement_time\x18\x07 \x01(\t\x12\x1b\n\x13operator_concept_id\x18\x08 \x01(\x05\x12\x17\n\x0fvalue_as_number\x18\t \x01(\x02\x12\x1b\n\x13value_as_concept_id\x18\n \x01(\x05\x12\x17\n\x0funit_concept_id\x18\x0b \x01(\x05\x12\x11\n\trange_low\x18\x0c \x01(\x02\x12\x12\n\nrange_high\x18\r \x01(\x02\x12\x13\n\x0bprovider_id\x18\x0e \x01(\x05\x12\x1b\n\x13visit_occurrence_id\x18\x0f \x01(\x05\x12\x17\n\x0fvisit_detail_id\x18\x10 \x01(\x05\x12 \n\x18measurement_source_value\x18\x11 \x01(\t\x12%\n\x1dmeasurement_source_concept_id\x18\x12 \x01(\x05\x12\x19\n\x11unit_source_value\x18\x13 \x01(\t\x12\x1a\n\x12value_source_value\x18\x14 \x01(\t\"\xb5\x01\n\x15ObservationPeriodInfo\x12\x1d\n\x15observation_period_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12%\n\x1dobservation_period_start_date\x18\x03 \x01(\t\x12#\n\x1bobservation_period_end_date\x18\x04 \x01(\t\x12\x1e\n\x16period_type_concept_id\x18\x05 \x01(\x05\"\x8e\x04\n\x0fObservationInfo\x12\x16\n\x0eobservation_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x1e\n\x16observation_concept_id\x18\x03 \x01(\x05\x12\x18\n\x10observation_date\x18\x04 \x01(\t\x12#\n\x1bobservation_type_concept_id\x18\x05 \x01(\x05\x12\x1c\n\x14observation_datetime\x18\x06 \x01(\t\x12\x17\n\x0fvalue_as_number\x18\x07 \x01(\x02\x12\x17\n\x0fvalue_as_string\x18\x08 \x01(\t\x12\x1b\n\x13value_as_concept_id\x18\t \x01(\x05\x12\x1c\n\x14qualifier_concept_id\x18\n \x01(\x05\x12\x17\n\x0funit_concept_id\x18\x0b \x01(\x05\x12\x13\n\x0bprovider_id\x18\x0c \x01(\x05\x12\x1b\n\x13visit_occurrence_id\x18\r \x01(\x05\x12\x17\n\x0fvisit_detail_id\x18\x0e \x01(\x05\x12 \n\x18observation_source_value\x18\x0f \x01(\t\x12%\n\x1dobservation_source_concept_id\x18\x10 \x01(\x05\x12\x19\n\x11unit_source_value\x18\x11 \x01(\t\x12\x1e\n\x16qualifier_source_value\x18\x12 \x01(\x05\"\xa0\x03\n\x17ProcedureOccurrenceInfo\x12\x1f\n\x17procedure_occurrence_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x1c\n\x14procedure_concept_id\x18\x03 \x01(\x05\x12\x16\n\x0eprocedure_date\x18\x04 \x01(\t\x12!\n\x19procedure_type_concept_id\x18\x05 \x01(\x05\x12\x1a\n\x12procedure_datetime\x18\x06 \x01(\t\x12\x1b\n\x13modifier_concept_id\x18\x07 \x01(\x05\x12\x10\n\x08quantity\x18\x08 \x01(\x05\x12\x13\n\x0bprovider_id\x18\t \x01(\x05\x12\x1b\n\x13visit_occurrence_id\x18\n \x01(\x05\x12\x17\n\x0fvisit_detail_id\x18\x0b \x01(\x05\x12\x1e\n\x16procedure_source_value\x18\x0c \x01(\t\x12#\n\x1bprocedure_source_concept_id\x18\r \x01(\x05\x12\x1d\n\x15modifier_source_value\x18\x0e \x01(\t\"\x82\x04\n\x13VisitOccurrenceInfo\x12\x1b\n\x13visit_occurrence_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x18\n\x10visit_concept_id\x18\x03 \x01(\x05\x12\x18\n\x10visit_start_date\x18\x04 \x01(\t\x12\x16\n\x0evisit_end_date\x18\x05 \x01(\t\x12\x1d\n\x15visit_type_concept_id\x18\x06 \x01(\x05\x12\x1c\n\x14visit_start_datetime\x18\x07 \x01(\t\x12\x1a\n\x12visit_end_datetime\x18\x08 \x01(\t\x12\x13\n\x0bprovider_id\x18\t \x01(\x05\x12\x14\n\x0c\x63\x61re_site_id\x18\n \x01(\x05\x12\x1a\n\x12visit_source_value\x18\x0b \x01(\t\x12\x1f\n\x17visit_source_concept_id\x18\x0c \x01(\x05\x12#\n\x1b\x61\x64mitting_source_concept_id\x18\r \x01(\x05\x12\x1e\n\x16\x61\x64mitting_source_value\x18\x0e \x01(\t\x12\x1f\n\x17\x64ischarge_to_concept_id\x18\x0f \x01(\x05\x12!\n\x19\x64ischarge_to_source_value\x18\x10 \x01(\t\x12%\n\x1dpreceding_visit_occurrence_id\x18\x11 \x01(\x05\"*\n\x11RequestComparison\x12\x15\n\rcomparison_id\x18\x01 \x01(\x05\"F\n\x14\x43omparisonCohortInfo\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x14\n\x0cperson_count\x18\x03 \x01(\x05\"t\n\x11\x43omparisonRowInfo\x12\x11\n\tcategory1\x18\x01 \x01(\t\x12\x11\n\tcategory2\x18\x02 \x01(\t\x12\x0e\n\x06values\x18\x03 \x03(\t\x12\x0f\n\x07p_value\x18\x04 \x01(\x02\x12\x18\n\x10p_value_is_group\x18\x05 \x01(\x08\"t\n\x12ResponseComparison\x12\x0c\n\x04name\x18\x01 \x01(\t\x12*\n\x0b\x63ohort_list\x18\x02 \x03(\x0b\x32\x15.ComparisonCohortInfo\x12$\n\x08row_list\x18\x03 \x03(\x0b\x32\x12.ComparisonRowInfo2\xc6\x07\n\x04\x43LUE\x12,\n\tAuthLogin\x12\r.RequestLogin\x1a\x0e.ResponseLogin\"\x00\x12:\n\rGetCohortList\x12\x12.RequestCohortList\x1a\x13.ResponseCohortList\"\x00\x12?\n\x14GetCohortPersonTable\x12\x14.RequestCohortStream\x1a\x0b.PersonInfo\"\x00(\x01\x30\x01\x12Y\n!GetCohortConditionOccurrenceTable\x12\x14.RequestCohortStream\x1a\x18.ConditionOccurrenceInfo\"\x00(\x01\x30\x01\x12=\n\x13GetCohortDeathTable\x12\x14.RequestCohortStream\x1a\n.DeathInfo\"\x00(\x01\x30\x01\x12O\n\x1cGetCohortDeviceExposureTable\x12\x14.RequestCohortStream\x1a\x13.DeviceExposureInfo\"\x00(\x01\x30\x01\x12K\n\x1aGetCohortDrugExposureTable\x12\x14.RequestCohortStream\x1a\x11.DrugExposureInfo\"\x00(\x01\x30\x01\x12I\n\x19GetCohortMeasurementTable\x12\x14.RequestCohortStream\x1a\x10.MeasurementInfo\"\x00(\x01\x30\x01\x12U\n\x1fGetCohortObservationPeriodTable\x12\x14.RequestCohortStream\x1a\x16.ObservationPeriodInfo\"\x00(\x01\x30\x01\x12I\n\x19GetCohortObservationTable\x12\x14.RequestCohortStream\x1a\x10.ObservationInfo\"\x00(\x01\x30\x01\x12Y\n!GetCohortProcedureOccurrenceTable\x12\x14.RequestCohortStream\x1a\x18.ProcedureOccurrenceInfo\"\x00(\x01\x30\x01\x12Q\n\x1dGetCohortVisitOccurrenceTable\x12\x14.RequestCohortStream\x1a\x14.VisitOccurrenceInfo\"\x00(\x01\x30\x01\x12@\n\x13GetCohortComparison\x12\x12.RequestComparison\x1a\x13.ResponseComparison\"\x00\x62\x06proto3'
+  serialized_pb=b'\n\nclue.proto\"/\n\x0cRequestLogin\x12\r\n\x05\x65mail\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"<\n\rResponseLogin\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x15\n\rrefresh_token\x18\x02 \x01(\t\"?\n\x11RequestCohortList\x12\x0c\n\x04term\x18\x01 \x01(\t\x12\x0c\n\x04page\x18\x02 \x01(\x05\x12\x0e\n\x06length\x18\x03 \x01(\x05\"\x86\x01\n\nCohortInfo\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x16\n\x0egenerated_time\x18\x03 \x01(\t\x12\x14\n\x0cperson_count\x18\x04 \x01(\x05\x12\x0c\n\x04\x64one\x18\x05 \x01(\t\x12\x13\n\x0bupdate_flag\x18\x06 \x01(\x05\x12\r\n\x05state\x18\x07 \x01(\x05\"6\n\x12ResponseCohortList\x12 \n\x0b\x63ohort_list\x18\x01 \x03(\x0b\x32\x0b.CohortInfo\";\n\x13RequestCohortStream\x12\x11\n\tfetch_num\x18\x01 \x01(\x05\x12\x11\n\tcohort_id\x18\x02 \x01(\x05\"\xea\x03\n\nPersonInfo\x12\x11\n\tperson_id\x18\x01 \x01(\x05\x12\x19\n\x11gender_concept_id\x18\x02 \x01(\x05\x12\x15\n\ryear_of_birth\x18\x03 \x01(\x05\x12\x17\n\x0frace_concept_id\x18\x04 \x01(\x05\x12\x1c\n\x14\x65thnicity_concept_id\x18\x05 \x01(\x05\x12\x16\n\x0emonth_of_birth\x18\x06 \x01(\x05\x12\x14\n\x0c\x64\x61y_of_birth\x18\x07 \x01(\x05\x12\x16\n\x0e\x62irth_datetime\x18\x08 \x01(\t\x12\x13\n\x0blocation_id\x18\t \x01(\x05\x12\x13\n\x0bprovider_id\x18\n \x01(\x05\x12\x14\n\x0c\x63\x61re_site_id\x18\x0b \x01(\x05\x12\x1b\n\x13person_source_value\x18\x0c \x01(\t\x12\x1b\n\x13gender_source_value\x18\r \x01(\t\x12 \n\x18gender_source_concept_id\x18\x0e \x01(\x05\x12\x19\n\x11race_source_value\x18\x0f \x01(\t\x12\x1e\n\x16race_source_concept_id\x18\x10 \x01(\x05\x12\x1e\n\x16\x65thnicity_source_value\x18\x11 \x01(\t\x12#\n\x1b\x65thnicity_source_concept_id\x18\x12 \x01(\x05\"\xfb\x03\n\x17\x43onditionOccurrenceInfo\x12\x1f\n\x17\x63ondition_occurrence_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x1c\n\x14\x63ondition_concept_id\x18\x03 \x01(\x05\x12\x1c\n\x14\x63ondition_start_date\x18\x04 \x01(\t\x12!\n\x19\x63ondition_type_concept_id\x18\x05 \x01(\x05\x12 \n\x18\x63ondition_start_datetime\x18\x06 \x01(\t\x12\x1a\n\x12\x63ondition_end_date\x18\x07 \x01(\t\x12\x1e\n\x16\x63ondition_end_datetime\x18\x08 \x01(\t\x12#\n\x1b\x63ondition_status_concept_id\x18\t \x01(\x05\x12\x13\n\x0bstop_reason\x18\n \x01(\t\x12\x13\n\x0bprovider_id\x18\x0b \x01(\x05\x12\x1b\n\x13visit_occurrence_id\x18\x0c \x01(\x05\x12\x17\n\x0fvisit_detail_id\x18\r \x01(\x05\x12\x1e\n\x16\x63ondition_source_value\x18\x0e \x01(\t\x12#\n\x1b\x63ondition_source_concept_id\x18\x0f \x01(\x05\x12%\n\x1d\x63ondition_status_source_value\x18\x10 \x01(\t\"\xc0\x01\n\tDeathInfo\x12\x11\n\tperson_id\x18\x01 \x01(\x05\x12\x12\n\ndeath_date\x18\x02 \x01(\t\x12\x16\n\x0e\x64\x65\x61th_datetime\x18\x03 \x01(\t\x12\x1d\n\x15\x64\x65\x61th_type_concept_id\x18\x04 \x01(\x05\x12\x18\n\x10\x63\x61use_concept_id\x18\x05 \x01(\t\x12\x1a\n\x12\x63\x61use_source_value\x18\x06 \x01(\t\x12\x1f\n\x17\x63\x61use_source_concept_id\x18\x07 \x01(\x05\"\xc8\x03\n\x12\x44\x65viceExposureInfo\x12\x1a\n\x12\x64\x65vice_exposure_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x19\n\x11\x64\x65vice_concept_id\x18\x03 \x01(\x05\x12\"\n\x1a\x64\x65vice_exposure_start_date\x18\x04 \x01(\t\x12\x1e\n\x16\x64\x65vice_type_concept_id\x18\x05 \x01(\x05\x12&\n\x1e\x64\x65vice_exposure_start_datetime\x18\x06 \x01(\t\x12 \n\x18\x64\x65vice_exposure_end_date\x18\x07 \x01(\t\x12$\n\x1c\x64\x65vice_exposure_end_datetime\x18\x08 \x01(\t\x12\x18\n\x10unique_device_id\x18\t \x01(\t\x12\x10\n\x08quantity\x18\n \x01(\x05\x12\x13\n\x0bprovider_id\x18\x0b \x01(\x05\x12\x1b\n\x13visit_occurrence_id\x18\x0c \x01(\x05\x12\x17\n\x0fvisit_detail_id\x18\r \x01(\x05\x12\x1b\n\x13\x64\x65vice_source_value\x18\x0e \x01(\t\x12 \n\x18\x64\x65vice_source_concept_id\x18\x0f \x01(\x05\"\xe7\x04\n\x10\x44rugExposureInfo\x12\x18\n\x10\x64rug_exposure_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x17\n\x0f\x64rug_concept_id\x18\x03 \x01(\x05\x12 \n\x18\x64rug_exposure_start_date\x18\x04 \x01(\t\x12\x1e\n\x16\x64rug_exposure_end_date\x18\x05 \x01(\t\x12\x1c\n\x14\x64rug_type_concept_id\x18\x06 \x01(\x05\x12$\n\x1c\x64rug_exposure_start_datetime\x18\x07 \x01(\t\x12\"\n\x1a\x64rug_exposure_end_datetime\x18\x08 \x01(\t\x12\x19\n\x11verbatim_end_date\x18\t \x01(\t\x12\x13\n\x0bstop_reason\x18\n \x01(\t\x12\x0f\n\x07refills\x18\x0b \x01(\x05\x12\x10\n\x08quantity\x18\x0c \x01(\x02\x12\x13\n\x0b\x64\x61ys_supply\x18\r \x01(\x05\x12\x0b\n\x03sig\x18\x0e \x01(\t\x12\x18\n\x10route_concept_id\x18\x0f \x01(\x05\x12\x12\n\nlot_number\x18\x10 \x01(\t\x12\x13\n\x0bprovider_id\x18\x11 \x01(\x05\x12\x1b\n\x13visit_occurrence_id\x18\x12 \x01(\x05\x12\x17\n\x0fvisit_detail_id\x18\x13 \x01(\x05\x12\x19\n\x11\x64rug_source_value\x18\x14 \x01(\t\x12\x1e\n\x16\x64rug_source_concept_id\x18\x15 \x01(\x05\x12\x1a\n\x12route_source_value\x18\x16 \x01(\t\x12\x1e\n\x16\x64ose_unit_source_value\x18\x17 \x01(\t\"\xb1\x04\n\x0fMeasurementInfo\x12\x16\n\x0emeasurement_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x1e\n\x16measurement_concept_id\x18\x03 \x01(\x05\x12\x18\n\x10measurement_date\x18\x04 \x01(\t\x12#\n\x1bmeasurement_type_concept_id\x18\x05 \x01(\x05\x12\x1c\n\x14measurement_datetime\x18\x06 \x01(\t\x12\x18\n\x10measurement_time\x18\x07 \x01(\t\x12\x1b\n\x13operator_concept_id\x18\x08 \x01(\x05\x12\x17\n\x0fvalue_as_number\x18\t \x01(\x02\x12\x1b\n\x13value_as_concept_id\x18\n \x01(\x05\x12\x17\n\x0funit_concept_id\x18\x0b \x01(\x05\x12\x11\n\trange_low\x18\x0c \x01(\x02\x12\x12\n\nrange_high\x18\r \x01(\x02\x12\x13\n\x0bprovider_id\x18\x0e \x01(\x05\x12\x1b\n\x13visit_occurrence_id\x18\x0f \x01(\x05\x12\x17\n\x0fvisit_detail_id\x18\x10 \x01(\x05\x12 \n\x18measurement_source_value\x18\x11 \x01(\t\x12%\n\x1dmeasurement_source_concept_id\x18\x12 \x01(\x05\x12\x19\n\x11unit_source_value\x18\x13 \x01(\t\x12\x1a\n\x12value_source_value\x18\x14 \x01(\t\"\xb5\x01\n\x15ObservationPeriodInfo\x12\x1d\n\x15observation_period_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12%\n\x1dobservation_period_start_date\x18\x03 \x01(\t\x12#\n\x1bobservation_period_end_date\x18\x04 \x01(\t\x12\x1e\n\x16period_type_concept_id\x18\x05 \x01(\x05\"\x8e\x04\n\x0fObservationInfo\x12\x16\n\x0eobservation_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x1e\n\x16observation_concept_id\x18\x03 \x01(\x05\x12\x18\n\x10observation_date\x18\x04 \x01(\t\x12#\n\x1bobservation_type_concept_id\x18\x05 \x01(\x05\x12\x1c\n\x14observation_datetime\x18\x06 \x01(\t\x12\x17\n\x0fvalue_as_number\x18\x07 \x01(\x02\x12\x17\n\x0fvalue_as_string\x18\x08 \x01(\t\x12\x1b\n\x13value_as_concept_id\x18\t \x01(\x05\x12\x1c\n\x14qualifier_concept_id\x18\n \x01(\x05\x12\x17\n\x0funit_concept_id\x18\x0b \x01(\x05\x12\x13\n\x0bprovider_id\x18\x0c \x01(\x05\x12\x1b\n\x13visit_occurrence_id\x18\r \x01(\x05\x12\x17\n\x0fvisit_detail_id\x18\x0e \x01(\x05\x12 \n\x18observation_source_value\x18\x0f \x01(\t\x12%\n\x1dobservation_source_concept_id\x18\x10 \x01(\x05\x12\x19\n\x11unit_source_value\x18\x11 \x01(\t\x12\x1e\n\x16qualifier_source_value\x18\x12 \x01(\x05\"\xa0\x03\n\x17ProcedureOccurrenceInfo\x12\x1f\n\x17procedure_occurrence_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x1c\n\x14procedure_concept_id\x18\x03 \x01(\x05\x12\x16\n\x0eprocedure_date\x18\x04 \x01(\t\x12!\n\x19procedure_type_concept_id\x18\x05 \x01(\x05\x12\x1a\n\x12procedure_datetime\x18\x06 \x01(\t\x12\x1b\n\x13modifier_concept_id\x18\x07 \x01(\x05\x12\x10\n\x08quantity\x18\x08 \x01(\x05\x12\x13\n\x0bprovider_id\x18\t \x01(\x05\x12\x1b\n\x13visit_occurrence_id\x18\n \x01(\x05\x12\x17\n\x0fvisit_detail_id\x18\x0b \x01(\x05\x12\x1e\n\x16procedure_source_value\x18\x0c \x01(\t\x12#\n\x1bprocedure_source_concept_id\x18\r \x01(\x05\x12\x1d\n\x15modifier_source_value\x18\x0e \x01(\t\"\x82\x04\n\x13VisitOccurrenceInfo\x12\x1b\n\x13visit_occurrence_id\x18\x01 \x01(\x05\x12\x11\n\tperson_id\x18\x02 \x01(\x05\x12\x18\n\x10visit_concept_id\x18\x03 \x01(\x05\x12\x18\n\x10visit_start_date\x18\x04 \x01(\t\x12\x16\n\x0evisit_end_date\x18\x05 \x01(\t\x12\x1d\n\x15visit_type_concept_id\x18\x06 \x01(\x05\x12\x1c\n\x14visit_start_datetime\x18\x07 \x01(\t\x12\x1a\n\x12visit_end_datetime\x18\x08 \x01(\t\x12\x13\n\x0bprovider_id\x18\t \x01(\x05\x12\x14\n\x0c\x63\x61re_site_id\x18\n \x01(\x05\x12\x1a\n\x12visit_source_value\x18\x0b \x01(\t\x12\x1f\n\x17visit_source_concept_id\x18\x0c \x01(\x05\x12#\n\x1b\x61\x64mitting_source_concept_id\x18\r \x01(\x05\x12\x1e\n\x16\x61\x64mitting_source_value\x18\x0e \x01(\t\x12\x1f\n\x17\x64ischarge_to_concept_id\x18\x0f \x01(\x05\x12!\n\x19\x64ischarge_to_source_value\x18\x10 \x01(\t\x12%\n\x1dpreceding_visit_occurrence_id\x18\x11 \x01(\x05\"*\n\x11RequestComparison\x12\x15\n\rcomparison_id\x18\x01 \x01(\x05\"F\n\x14\x43omparisonCohortInfo\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x14\n\x0cperson_count\x18\x03 \x01(\x05\"t\n\x11\x43omparisonRowInfo\x12\x11\n\tcategory1\x18\x01 \x01(\t\x12\x11\n\tcategory2\x18\x02 \x01(\t\x12\x0e\n\x06values\x18\x03 \x03(\t\x12\x0f\n\x07p_value\x18\x04 \x01(\x02\x12\x18\n\x10p_value_is_group\x18\x05 \x01(\x08\"t\n\x12ResponseComparison\x12\x0c\n\x04name\x18\x01 \x01(\t\x12*\n\x0b\x63ohort_list\x18\x02 \x03(\x0b\x32\x15.ComparisonCohortInfo\x12$\n\x08row_list\x18\x03 \x03(\x0b\x32\x12.ComparisonRowInfo\"1\n\x14RequestIncidenceRate\x12\x19\n\x11incidence_rate_id\x18\x01 \x01(\x05\"\x90\x03\n\x16IncidenceResultRowInfo\x12\x18\n\x10target_cohort_id\x18\x01 \x01(\x05\x12\x19\n\x11outcome_cohort_id\x18\x02 \x01(\x05\x12\"\n\x1atarget_cohort_person_count\x18\x03 \x01(\x05\x12\x14\n\x0cperson_count\x18\x04 \x01(\x05\x12\x15\n\rcases_outcome\x18\x05 \x01(\x05\x12\"\n\x1aproportion_per_100_persons\x18\x06 \x01(\x02\x12!\n\x19proportion_per_1k_persons\x18\x07 \x01(\x02\x12\"\n\x1aproportion_per_10k_persons\x18\x08 \x01(\x02\x12\x1a\n\x12time_at_risk_years\x18\t \x01(\x02\x12\"\n\x1arate_per_100_persons_years\x18\n \x01(\x02\x12!\n\x19rate_per_1k_persons_years\x18\x0b \x01(\x02\x12\"\n\x1arate_per_10k_persons_years\x18\x0c \x01(\x02\"H\n\x1bResponseIncidenceRateResult\x12)\n\x08row_list\x18\x01 \x03(\x0b\x32\x17.IncidenceResultRowInfo\"J\n\x1aRequestIncidenceRateStream\x12\x11\n\tfetch_num\x18\x01 \x01(\x05\x12\x19\n\x11incidence_rate_id\x18\x02 \x01(\x05\"\x89\x03\n\x10IncidenceRawInfo\x12\x18\n\x10target_cohort_id\x18\x01 \x01(\x05\x12\x19\n\x11outcome_cohort_id\x18\x02 \x01(\x05\x12\x11\n\tperson_id\x18\x03 \x01(\x05\x12\x10\n\x08person_n\x18\x04 \x01(\x05\x12\x18\n\x10prior_outcome_yn\x18\x05 \x01(\x05\x12\x1b\n\x13index_date_earliest\x18\x06 \x01(\t\x12\x19\n\x11index_date_latest\x18\x07 \x01(\t\x12\x16\n\x0etar_start_date\x18\x08 \x01(\t\x12\x14\n\x0ctar_end_date\x18\t \x01(\t\x12\x17\n\x0f\x63ohort_end_date\x18\n \x01(\t\x12#\n\x1bobservation_period_end_date\x18\x0b \x01(\t\x12\x12\n\ndeath_date\x18\x0c \x01(\t\x12\x13\n\x0b\x63\x65nsor_date\x18\r \x01(\t\x12\x12\n\no_min_date\x18\x0e \x01(\t\x12\x0e\n\x06o_time\x18\x0f \x01(\x05\x12\x10\n\x08o_status\x18\x10 \x01(\x05\x32\xe4\x08\n\x04\x43LUE\x12,\n\tAuthLogin\x12\r.RequestLogin\x1a\x0e.ResponseLogin\"\x00\x12:\n\rGetCohortList\x12\x12.RequestCohortList\x1a\x13.ResponseCohortList\"\x00\x12?\n\x14GetCohortPersonTable\x12\x14.RequestCohortStream\x1a\x0b.PersonInfo\"\x00(\x01\x30\x01\x12Y\n!GetCohortConditionOccurrenceTable\x12\x14.RequestCohortStream\x1a\x18.ConditionOccurrenceInfo\"\x00(\x01\x30\x01\x12=\n\x13GetCohortDeathTable\x12\x14.RequestCohortStream\x1a\n.DeathInfo\"\x00(\x01\x30\x01\x12O\n\x1cGetCohortDeviceExposureTable\x12\x14.RequestCohortStream\x1a\x13.DeviceExposureInfo\"\x00(\x01\x30\x01\x12K\n\x1aGetCohortDrugExposureTable\x12\x14.RequestCohortStream\x1a\x11.DrugExposureInfo\"\x00(\x01\x30\x01\x12I\n\x19GetCohortMeasurementTable\x12\x14.RequestCohortStream\x1a\x10.MeasurementInfo\"\x00(\x01\x30\x01\x12U\n\x1fGetCohortObservationPeriodTable\x12\x14.RequestCohortStream\x1a\x16.ObservationPeriodInfo\"\x00(\x01\x30\x01\x12I\n\x19GetCohortObservationTable\x12\x14.RequestCohortStream\x1a\x10.ObservationInfo\"\x00(\x01\x30\x01\x12Y\n!GetCohortProcedureOccurrenceTable\x12\x14.RequestCohortStream\x1a\x18.ProcedureOccurrenceInfo\"\x00(\x01\x30\x01\x12Q\n\x1dGetCohortVisitOccurrenceTable\x12\x14.RequestCohortStream\x1a\x14.VisitOccurrenceInfo\"\x00(\x01\x30\x01\x12@\n\x13GetCohortComparison\x12\x12.RequestComparison\x1a\x13.ResponseComparison\"\x00\x12O\n\x16GetIncidenceRateResult\x12\x15.RequestIncidenceRate\x1a\x1c.ResponseIncidenceRateResult\"\x00\x12K\n\x13GetIncidenceRateRaw\x12\x1b.RequestIncidenceRateStream\x1a\x11.IncidenceRawInfo\"\x00(\x01\x30\x01\x62\x06proto3'
 )
 
 
@@ -1798,9 +1798,359 @@ _RESPONSECOMPARISON = _descriptor.Descriptor(
   serialized_end=5282,
 )
 
+
+_REQUESTINCIDENCERATE = _descriptor.Descriptor(
+  name='RequestIncidenceRate',
+  full_name='RequestIncidenceRate',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='incidence_rate_id', full_name='RequestIncidenceRate.incidence_rate_id', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5284,
+  serialized_end=5333,
+)
+
+
+_INCIDENCERESULTROWINFO = _descriptor.Descriptor(
+  name='IncidenceResultRowInfo',
+  full_name='IncidenceResultRowInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='target_cohort_id', full_name='IncidenceResultRowInfo.target_cohort_id', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='outcome_cohort_id', full_name='IncidenceResultRowInfo.outcome_cohort_id', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='target_cohort_person_count', full_name='IncidenceResultRowInfo.target_cohort_person_count', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='person_count', full_name='IncidenceResultRowInfo.person_count', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='cases_outcome', full_name='IncidenceResultRowInfo.cases_outcome', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='proportion_per_100_persons', full_name='IncidenceResultRowInfo.proportion_per_100_persons', index=5,
+      number=6, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='proportion_per_1k_persons', full_name='IncidenceResultRowInfo.proportion_per_1k_persons', index=6,
+      number=7, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='proportion_per_10k_persons', full_name='IncidenceResultRowInfo.proportion_per_10k_persons', index=7,
+      number=8, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='time_at_risk_years', full_name='IncidenceResultRowInfo.time_at_risk_years', index=8,
+      number=9, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='rate_per_100_persons_years', full_name='IncidenceResultRowInfo.rate_per_100_persons_years', index=9,
+      number=10, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='rate_per_1k_persons_years', full_name='IncidenceResultRowInfo.rate_per_1k_persons_years', index=10,
+      number=11, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='rate_per_10k_persons_years', full_name='IncidenceResultRowInfo.rate_per_10k_persons_years', index=11,
+      number=12, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5336,
+  serialized_end=5736,
+)
+
+
+_RESPONSEINCIDENCERATERESULT = _descriptor.Descriptor(
+  name='ResponseIncidenceRateResult',
+  full_name='ResponseIncidenceRateResult',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='row_list', full_name='ResponseIncidenceRateResult.row_list', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5738,
+  serialized_end=5810,
+)
+
+
+_REQUESTINCIDENCERATESTREAM = _descriptor.Descriptor(
+  name='RequestIncidenceRateStream',
+  full_name='RequestIncidenceRateStream',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='fetch_num', full_name='RequestIncidenceRateStream.fetch_num', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='incidence_rate_id', full_name='RequestIncidenceRateStream.incidence_rate_id', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5812,
+  serialized_end=5886,
+)
+
+
+_INCIDENCERAWINFO = _descriptor.Descriptor(
+  name='IncidenceRawInfo',
+  full_name='IncidenceRawInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='target_cohort_id', full_name='IncidenceRawInfo.target_cohort_id', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='outcome_cohort_id', full_name='IncidenceRawInfo.outcome_cohort_id', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='person_id', full_name='IncidenceRawInfo.person_id', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='person_n', full_name='IncidenceRawInfo.person_n', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='prior_outcome_yn', full_name='IncidenceRawInfo.prior_outcome_yn', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='index_date_earliest', full_name='IncidenceRawInfo.index_date_earliest', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='index_date_latest', full_name='IncidenceRawInfo.index_date_latest', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='tar_start_date', full_name='IncidenceRawInfo.tar_start_date', index=7,
+      number=8, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='tar_end_date', full_name='IncidenceRawInfo.tar_end_date', index=8,
+      number=9, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='cohort_end_date', full_name='IncidenceRawInfo.cohort_end_date', index=9,
+      number=10, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='observation_period_end_date', full_name='IncidenceRawInfo.observation_period_end_date', index=10,
+      number=11, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='death_date', full_name='IncidenceRawInfo.death_date', index=11,
+      number=12, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='censor_date', full_name='IncidenceRawInfo.censor_date', index=12,
+      number=13, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='o_min_date', full_name='IncidenceRawInfo.o_min_date', index=13,
+      number=14, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='o_time', full_name='IncidenceRawInfo.o_time', index=14,
+      number=15, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='o_status', full_name='IncidenceRawInfo.o_status', index=15,
+      number=16, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5889,
+  serialized_end=6282,
+)
+
 _RESPONSECOHORTLIST.fields_by_name['cohort_list'].message_type = _COHORTINFO
 _RESPONSECOMPARISON.fields_by_name['cohort_list'].message_type = _COMPARISONCOHORTINFO
 _RESPONSECOMPARISON.fields_by_name['row_list'].message_type = _COMPARISONROWINFO
+_RESPONSEINCIDENCERATERESULT.fields_by_name['row_list'].message_type = _INCIDENCERESULTROWINFO
 DESCRIPTOR.message_types_by_name['RequestLogin'] = _REQUESTLOGIN
 DESCRIPTOR.message_types_by_name['ResponseLogin'] = _RESPONSELOGIN
 DESCRIPTOR.message_types_by_name['RequestCohortList'] = _REQUESTCOHORTLIST
@@ -1821,6 +2171,11 @@ DESCRIPTOR.message_types_by_name['RequestComparison'] = _REQUESTCOMPARISON
 DESCRIPTOR.message_types_by_name['ComparisonCohortInfo'] = _COMPARISONCOHORTINFO
 DESCRIPTOR.message_types_by_name['ComparisonRowInfo'] = _COMPARISONROWINFO
 DESCRIPTOR.message_types_by_name['ResponseComparison'] = _RESPONSECOMPARISON
+DESCRIPTOR.message_types_by_name['RequestIncidenceRate'] = _REQUESTINCIDENCERATE
+DESCRIPTOR.message_types_by_name['IncidenceResultRowInfo'] = _INCIDENCERESULTROWINFO
+DESCRIPTOR.message_types_by_name['ResponseIncidenceRateResult'] = _RESPONSEINCIDENCERATERESULT
+DESCRIPTOR.message_types_by_name['RequestIncidenceRateStream'] = _REQUESTINCIDENCERATESTREAM
+DESCRIPTOR.message_types_by_name['IncidenceRawInfo'] = _INCIDENCERAWINFO
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 RequestLogin = _reflection.GeneratedProtocolMessageType('RequestLogin', (_message.Message,), {
@@ -1963,6 +2318,41 @@ ResponseComparison = _reflection.GeneratedProtocolMessageType('ResponseCompariso
   })
 _sym_db.RegisterMessage(ResponseComparison)
 
+RequestIncidenceRate = _reflection.GeneratedProtocolMessageType('RequestIncidenceRate', (_message.Message,), {
+  'DESCRIPTOR' : _REQUESTINCIDENCERATE,
+  '__module__' : 'clue_pb2'
+  # @@protoc_insertion_point(class_scope:RequestIncidenceRate)
+  })
+_sym_db.RegisterMessage(RequestIncidenceRate)
+
+IncidenceResultRowInfo = _reflection.GeneratedProtocolMessageType('IncidenceResultRowInfo', (_message.Message,), {
+  'DESCRIPTOR' : _INCIDENCERESULTROWINFO,
+  '__module__' : 'clue_pb2'
+  # @@protoc_insertion_point(class_scope:IncidenceResultRowInfo)
+  })
+_sym_db.RegisterMessage(IncidenceResultRowInfo)
+
+ResponseIncidenceRateResult = _reflection.GeneratedProtocolMessageType('ResponseIncidenceRateResult', (_message.Message,), {
+  'DESCRIPTOR' : _RESPONSEINCIDENCERATERESULT,
+  '__module__' : 'clue_pb2'
+  # @@protoc_insertion_point(class_scope:ResponseIncidenceRateResult)
+  })
+_sym_db.RegisterMessage(ResponseIncidenceRateResult)
+
+RequestIncidenceRateStream = _reflection.GeneratedProtocolMessageType('RequestIncidenceRateStream', (_message.Message,), {
+  'DESCRIPTOR' : _REQUESTINCIDENCERATESTREAM,
+  '__module__' : 'clue_pb2'
+  # @@protoc_insertion_point(class_scope:RequestIncidenceRateStream)
+  })
+_sym_db.RegisterMessage(RequestIncidenceRateStream)
+
+IncidenceRawInfo = _reflection.GeneratedProtocolMessageType('IncidenceRawInfo', (_message.Message,), {
+  'DESCRIPTOR' : _INCIDENCERAWINFO,
+  '__module__' : 'clue_pb2'
+  # @@protoc_insertion_point(class_scope:IncidenceRawInfo)
+  })
+_sym_db.RegisterMessage(IncidenceRawInfo)
+
 
 
 _CLUE = _descriptor.ServiceDescriptor(
@@ -1972,8 +2362,8 @@ _CLUE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=5285,
-  serialized_end=6251,
+  serialized_start=6285,
+  serialized_end=7409,
   methods=[
   _descriptor.MethodDescriptor(
     name='AuthLogin',
@@ -2102,6 +2492,26 @@ _CLUE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_REQUESTCOMPARISON,
     output_type=_RESPONSECOMPARISON,
+    serialized_options=None,
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetIncidenceRateResult',
+    full_name='CLUE.GetIncidenceRateResult',
+    index=13,
+    containing_service=None,
+    input_type=_REQUESTINCIDENCERATE,
+    output_type=_RESPONSEINCIDENCERATERESULT,
+    serialized_options=None,
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetIncidenceRateRaw',
+    full_name='CLUE.GetIncidenceRateRaw',
+    index=14,
+    containing_service=None,
+    input_type=_REQUESTINCIDENCERATESTREAM,
+    output_type=_INCIDENCERAWINFO,
     serialized_options=None,
     create_key=_descriptor._internal_create_key,
   ),

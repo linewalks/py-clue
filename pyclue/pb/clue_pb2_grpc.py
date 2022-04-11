@@ -79,6 +79,16 @@ class CLUEStub(object):
                 request_serializer=clue__pb2.RequestComparison.SerializeToString,
                 response_deserializer=clue__pb2.ResponseComparison.FromString,
                 )
+        self.GetIncidenceRateResult = channel.unary_unary(
+                '/CLUE/GetIncidenceRateResult',
+                request_serializer=clue__pb2.RequestIncidenceRate.SerializeToString,
+                response_deserializer=clue__pb2.ResponseIncidenceRateResult.FromString,
+                )
+        self.GetIncidenceRateRaw = channel.stream_stream(
+                '/CLUE/GetIncidenceRateRaw',
+                request_serializer=clue__pb2.RequestIncidenceRateStream.SerializeToString,
+                response_deserializer=clue__pb2.IncidenceRawInfo.FromString,
+                )
 
 
 class CLUEServicer(object):
@@ -162,6 +172,18 @@ class CLUEServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def GetIncidenceRateResult(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetIncidenceRateRaw(self, request_iterator, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_CLUEServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -229,6 +251,16 @@ def add_CLUEServicer_to_server(servicer, server):
                     servicer.GetCohortComparison,
                     request_deserializer=clue__pb2.RequestComparison.FromString,
                     response_serializer=clue__pb2.ResponseComparison.SerializeToString,
+            ),
+            'GetIncidenceRateResult': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetIncidenceRateResult,
+                    request_deserializer=clue__pb2.RequestIncidenceRate.FromString,
+                    response_serializer=clue__pb2.ResponseIncidenceRateResult.SerializeToString,
+            ),
+            'GetIncidenceRateRaw': grpc.stream_stream_rpc_method_handler(
+                    servicer.GetIncidenceRateRaw,
+                    request_deserializer=clue__pb2.RequestIncidenceRateStream.FromString,
+                    response_serializer=clue__pb2.IncidenceRawInfo.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -458,5 +490,39 @@ class CLUE(object):
         return grpc.experimental.unary_unary(request, target, '/CLUE/GetCohortComparison',
             clue__pb2.RequestComparison.SerializeToString,
             clue__pb2.ResponseComparison.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetIncidenceRateResult(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/CLUE/GetIncidenceRateResult',
+            clue__pb2.RequestIncidenceRate.SerializeToString,
+            clue__pb2.ResponseIncidenceRateResult.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetIncidenceRateRaw(request_iterator,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.stream_stream(request_iterator, target, '/CLUE/GetIncidenceRateRaw',
+            clue__pb2.RequestIncidenceRateStream.SerializeToString,
+            clue__pb2.IncidenceRawInfo.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
