@@ -9,7 +9,7 @@ from pyclue.converter import convert
 from pyclue.stream import Stream
 
 
-class IncidencerateFeatures:
+class IncidenceRateFeatures:
   @convert()
   def get_incidence_rate_result(
       self,
