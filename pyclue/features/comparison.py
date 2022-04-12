@@ -1,9 +1,11 @@
 from typing import List, Dict
+
 from clue_pb2 import (
     RequestComparison
 )
 
 from pyclue.converter import convert
+
 
 class CohortComparisonFeatures:
   @convert()

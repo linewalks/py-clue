@@ -1,4 +1,5 @@
 from typing import List, Dict
+
 from clue_pb2 import (
     RequestCohortList,
     RequestCohortStream

@@ -10,6 +10,7 @@ def pytest_addoption(parser):
   parser.addini("clue_password", "clue password")
   parser.addini("test_cohort_id", "test cohort id")
   parser.addini("test_comparison_id", "test comparison id")
+  parser.addini("test_incidence_rate_id", "test incidence rate id")
 
 
 @pytest.fixture(scope="session")
@@ -55,3 +56,7 @@ def test_cohort_id(request):
 @pytest.fixture(scope="session")
 def test_comparison_id(request):
   return int(request.config.getini("test_comparison_id"))
+
+@pytest.fixture(scope="session")
+def test_incidence_rate_id(request):
+  return int(request.config.getini("test_incidence_rate_id"))
