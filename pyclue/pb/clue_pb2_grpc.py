@@ -87,7 +87,7 @@ class CLUEStub(object):
         self.GetIncidenceRateRaw = channel.stream_stream(
                 '/CLUE/GetIncidenceRateRaw',
                 request_serializer=clue__pb2.RequestIncidenceRateStream.SerializeToString,
-                response_deserializer=clue__pb2.IncidenceRawInfo.FromString,
+                response_deserializer=clue__pb2.IncidenceRateRawInfo.FromString,
                 )
 
 
@@ -260,7 +260,7 @@ def add_CLUEServicer_to_server(servicer, server):
             'GetIncidenceRateRaw': grpc.stream_stream_rpc_method_handler(
                     servicer.GetIncidenceRateRaw,
                     request_deserializer=clue__pb2.RequestIncidenceRateStream.FromString,
-                    response_serializer=clue__pb2.IncidenceRawInfo.SerializeToString,
+                    response_serializer=clue__pb2.IncidenceRateRawInfo.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -523,6 +523,6 @@ class CLUE(object):
             metadata=None):
         return grpc.experimental.stream_stream(request_iterator, target, '/CLUE/GetIncidenceRateRaw',
             clue__pb2.RequestIncidenceRateStream.SerializeToString,
-            clue__pb2.IncidenceRawInfo.FromString,
+            clue__pb2.IncidenceRateRawInfo.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
