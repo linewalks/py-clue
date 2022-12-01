@@ -1,7 +1,9 @@
+bin/get_proto.sh
+pytest.ini
+
+
 __pycache__
 *.pyc
-
-pytest.ini
 
 # Distribution / packaging
 .Python
@@ -26,3 +28,6 @@ MANIFEST
 # Coverage
 htmlcov
 .coverage
+
+#pyenv
+.python-version
