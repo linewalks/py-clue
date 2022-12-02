@@ -24,6 +24,21 @@ class CLUEStub(object):
                 request_serializer=clue__pb2.RequestCohortList.SerializeToString,
                 response_deserializer=clue__pb2.ResponseCohortList.FromString,
                 )
+        self.GetCohortTableList = channel.unary_unary(
+                '/CLUE/GetCohortTableList',
+                request_serializer=clue__pb2.EmptyMessage.SerializeToString,
+                response_deserializer=clue__pb2.ResponseTableList.FromString,
+                )
+        self.GetCohortTableSchema = channel.unary_unary(
+                '/CLUE/GetCohortTableSchema',
+                request_serializer=clue__pb2.RequestTableSchema.SerializeToString,
+                response_deserializer=clue__pb2.ResponseTableSchema.FromString,
+                )
+        self.GetCohortTable = channel.stream_stream(
+                '/CLUE/GetCohortTable',
+                request_serializer=clue__pb2.RequestCohortTable.SerializeToString,
+                response_deserializer=clue__pb2.TableData.FromString,
+                )
         self.GetCohortPersonTable = channel.stream_stream(
                 '/CLUE/GetCohortPersonTable',
                 request_serializer=clue__pb2.RequestCohortStream.SerializeToString,
@@ -101,6 +116,24 @@ class CLUEServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def GetCohortList(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetCohortTableList(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetCohortTableSchema(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetCohortTable(self, request_iterator, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -196,6 +229,21 @@ def add_CLUEServicer_to_server(servicer, server):
                     servicer.GetCohortList,
                     request_deserializer=clue__pb2.RequestCohortList.FromString,
                     response_serializer=clue__pb2.ResponseCohortList.SerializeToString,
+            ),
+            'GetCohortTableList': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetCohortTableList,
+                    request_deserializer=clue__pb2.EmptyMessage.FromString,
+                    response_serializer=clue__pb2.ResponseTableList.SerializeToString,
+            ),
+            'GetCohortTableSchema': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetCohortTableSchema,
+                    request_deserializer=clue__pb2.RequestTableSchema.FromString,
+                    response_serializer=clue__pb2.ResponseTableSchema.SerializeToString,
+            ),
+            'GetCohortTable': grpc.stream_stream_rpc_method_handler(
+                    servicer.GetCohortTable,
+                    request_deserializer=clue__pb2.RequestCohortTable.FromString,
+                    response_serializer=clue__pb2.TableData.SerializeToString,
             ),
             'GetCohortPersonTable': grpc.stream_stream_rpc_method_handler(
                     servicer.GetCohortPersonTable,
@@ -303,6 +351,57 @@ class CLUE(object):
         return grpc.experimental.unary_unary(request, target, '/CLUE/GetCohortList',
             clue__pb2.RequestCohortList.SerializeToString,
             clue__pb2.ResponseCohortList.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetCohortTableList(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/CLUE/GetCohortTableList',
+            clue__pb2.EmptyMessage.SerializeToString,
+            clue__pb2.ResponseTableList.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetCohortTableSchema(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/CLUE/GetCohortTableSchema',
+            clue__pb2.RequestTableSchema.SerializeToString,
+            clue__pb2.ResponseTableSchema.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetCohortTable(request_iterator,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.stream_stream(request_iterator, target, '/CLUE/GetCohortTable',
+            clue__pb2.RequestCohortTable.SerializeToString,
+            clue__pb2.TableData.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 

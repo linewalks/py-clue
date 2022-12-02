@@ -2,56 +2,31 @@ import pytest
 
 
 class TestCohort:
+  @pytest.fixture(scope="session")
+  def test_table_name(self, request):
+    return request.config.getini("test_table_name")
+
   def test_cohort_list(self, conn):
     cohort_list = conn.get_cohort_list()
     assert isinstance(cohort_list, list)
 
+  def test_table_list(self, conn):
+    table_list = conn.get_cohort_table_list()
+    assert isinstance(table_list, list)
+    assert table_list
 
-class TestCohortPersonTable:
-  @pytest.fixture(scope="function")
-  def result(self, conn, test_cohort_id):
-    stream = conn.get_cohort_person_table(test_cohort_id)
-    yield stream
-    stream.close()
-
-  def test_fetchone(self, result):
+  def test_table_data(self, conn, test_cohort_id, test_table_name):
+    result = conn.get_cohort_table(
+        test_cohort_id,
+        test_table_name
+    )
     obj = result.fetchone()
-    assert "person_id" in obj
+    assert obj
 
-  @pytest.mark.parametrize("num", [1, 2, 5, 10])
-  def test_fetchmany(self, result, num):
-    obj_list = result.fetchmany(num)
-    assert isinstance(obj_list, list)
-    assert len(obj_list) <= num
-
-  def test_fetchall(self, result):
-    obj_list = result.fetchall()
-    assert isinstance(obj_list, list)
-
-  def test_multiple(self, result):
-    assert result.fetchone()
-    assert result.fetchone()
-    assert result.fetchmany(2)
-
-
-class TestCohortTables:
-  @pytest.mark.parametrize(
-      "table_name",
-      [
-          "condition_occurrence",
-          "death",
-          "device_exposure",
-          "drug_exposure",
-          "measurement",
-          "observation_period",
-          "observation",
-          "procedure_occurrence",
-          "visit_occurrence"
-      ]
-  )
-  def test_fetchone(self, conn, test_cohort_id, table_name):
-    func = getattr(conn, f"get_cohort_{table_name}_table")
-    stream = func(test_cohort_id)
-    obj = stream.fetchone()
-    assert "person_id" in obj
-    stream.close()
+  def test_table_data_fetchmany(self, conn, test_cohort_id, test_table_name):
+    result = conn.get_cohort_table(
+        test_cohort_id,
+        test_table_name
+    )
+    obj_list = result.fetchmany(10)
+    assert obj_list

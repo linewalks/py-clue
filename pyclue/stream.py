@@ -8,13 +8,20 @@ class Stream:
   """
   Controlls data stream.
   """
-  def __init__(self, func, request_type, **kwargs):
+  def __init__(
+      self,
+      func,
+      request_type,
+      response_func,
+      **kwargs
+  ):
     self._stop_event = Event()
     self._request_condition = Condition()
     self._response_condition = Condition()
 
     self.func = func
     self.request_type = request_type
+    self.response_func = response_func
     self.request_param_dict = kwargs
 
     self._fetch_num_queue = deque()
@@ -43,15 +50,13 @@ class Stream:
       self._fetch_num_queue.append(fetch_num)
       self._request_condition.notify()
 
-  @convert()
   def fetchone(self):
     """
     Fetch one response.
     """
     self._add_fetch_num(1)
-    return next(self._result)
+    return self.response_func(next(self._result))
 
-  @convert()
   def fetchmany(self, num):
     """
     Fetch multiple responses.
@@ -64,16 +69,15 @@ class Stream:
     result = []
     for _ in range(num):
       try:
-        result.append(next(self._result))
+        result.append(self.response_func(next(self._result)))
       except StopIteration:
         # when length of result is less then num
         break
     return result
 
-  @convert()
   def fetchall(self):
     self._add_fetch_num(0)
-    return [each for each in self._result]
+    return [self.response_func(each) for each in self._result]
 
   def close(self):
     """

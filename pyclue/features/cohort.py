@@ -1,8 +1,10 @@
 from typing import List, Dict
 
 from clue_pb2 import (
+    EmptyMessage,
     RequestCohortList,
-    RequestCohortStream
+    RequestTableSchema,
+    RequestCohortTable
 )
 
 from pyclue.converter import convert
@@ -38,189 +40,47 @@ class CohortFeatures:
 
     return cohort_list
 
-  def get_cohort_person_table(self, cohort_id: int) -> Stream:
+  @convert()
+  def get_cohort_table_list(self) -> List[str]:
     """
-    Get person table of a cohort.
-    Data stream connection will be opened.
+    Get the list of the tables.
 
-    :param int cohort_id:
-      ID of the cohort.
-
-    :return: Stream object.
-    :rtype: Stream
+    :return List of table names
+    :rtype: List of string
     """
+    table_list = self.stub.GetCohortTableList(EmptyMessage()).table_list
+    return table_list
+
+  def __make_response(self, schema_info, obj):
+    result_obj = {}
+    for col, value in zip(schema_info.int32_cols, obj.int32_values):
+      result_obj[col] = value.value
+
+    for col, value in zip(schema_info.int64_cols, obj.int64_values):
+      result_obj[col] = value.value
+
+    for col, value in zip(schema_info.float_cols, obj.float_values):
+      result_obj[col] = value.value
+
+    for col, value in zip(schema_info.str_cols, obj.str_values):
+      result_obj[col] = value.value
+
+    for col, value in zip(schema_info.bool_cols, obj.bool_values):
+      result_obj[col] = value.value
+
+    return result_obj
+
+  def get_cohort_table(self, cohort_id, table_name):
+    """
+    """
+    schema_info = self.stub.GetCohortTableSchema(RequestTableSchema(
+        table_name=table_name
+    ))
+
     return Stream(
-        self.stub.GetCohortPersonTable,
-        RequestCohortStream,
-        cohort_id=cohort_id
-    )
-
-  def get_cohort_person_table(self, cohort_id: int) -> Stream:
-    """
-    Get person table of a cohort.
-    Data stream connection will be opened.
-
-    :param int cohort_id:
-      ID of the cohort.
-
-    :return: Stream object.
-    :rtype: Stream
-    """
-    return Stream(
-        self.stub.GetCohortPersonTable,
-        RequestCohortStream,
-        cohort_id=cohort_id
-    )
-
-  def get_cohort_condition_occurrence_table(self, cohort_id: int) -> Stream:
-    """
-    Get condition_occurrence table of a cohort.
-    Data stream connection will be opened.
-
-    :param int cohort_id:
-      ID of the cohort.
-
-    :return: Stream object.
-    :rtype: Stream
-    """
-    return Stream(
-        self.stub.GetCohortConditionOccurrenceTable,
-        RequestCohortStream,
-        cohort_id=cohort_id
-    )
-
-  def get_cohort_death_table(self, cohort_id: int) -> Stream:
-    """
-    Get death table of a cohort.
-    Data stream connection will be opened.
-
-    :param int cohort_id:
-      ID of the cohort.
-
-    :return: Stream object.
-    :rtype: Stream
-    """
-    return Stream(
-        self.stub.GetCohortDeathTable,
-        RequestCohortStream,
-        cohort_id=cohort_id
-    )
-
-  def get_cohort_device_exposure_table(self, cohort_id: int) -> Stream:
-    """
-    Get device_exposure table of a cohort.
-    Data stream connection will be opened.
-
-    :param int cohort_id:
-      ID of the cohort.
-
-    :return: Stream object.
-    :rtype: Stream
-    """
-    return Stream(
-        self.stub.GetCohortDeviceExposureTable,
-        RequestCohortStream,
-        cohort_id=cohort_id
-    )
-
-  def get_cohort_drug_exposure_table(self, cohort_id: int) -> Stream:
-    """
-    Get drug_exposure table of a cohort.
-    Data stream connection will be opened.
-
-    :param int cohort_id:
-      ID of the cohort.
-
-    :return: Stream object.
-    :rtype: Stream
-    """
-    return Stream(
-        self.stub.GetCohortDrugExposureTable,
-        RequestCohortStream,
-        cohort_id=cohort_id
-    )
-
-  def get_cohort_measurement_table(self, cohort_id: int) -> Stream:
-    """
-    Get measurement table of a cohort.
-    Data stream connection will be opened.
-
-    :param int cohort_id:
-      ID of the cohort.
-
-    :return: Stream object.
-    :rtype: Stream
-    """
-    return Stream(
-        self.stub.GetCohortMeasurementTable,
-        RequestCohortStream,
-        cohort_id=cohort_id
-    )
-
-  def get_cohort_observation_period_table(self, cohort_id: int) -> Stream:
-    """
-    Get observation_period table of a cohort.
-    Data stream connection will be opened.
-
-    :param int cohort_id:
-      ID of the cohort.
-
-    :return: Stream object.
-    :rtype: Stream
-    """
-    return Stream(
-        self.stub.GetCohortObservationPeriodTable,
-        RequestCohortStream,
-        cohort_id=cohort_id
-    )
-
-  def get_cohort_observation_table(self, cohort_id: int) -> Stream:
-    """
-    Get observation table of a cohort.
-    Data stream connection will be opened.
-
-    :param int cohort_id:
-      ID of the cohort.
-
-    :return: Stream object.
-    :rtype: Stream
-    """
-    return Stream(
-        self.stub.GetCohortObservationTable,
-        RequestCohortStream,
-        cohort_id=cohort_id
-    )
-
-  def get_cohort_procedure_occurrence_table(self, cohort_id: int) -> Stream:
-    """
-    Get procedure_occurrence table of a cohort.
-    Data stream connection will be opened.
-
-    :param int cohort_id:
-      ID of the cohort.
-
-    :return: Stream object.
-    :rtype: Stream
-    """
-    return Stream(
-        self.stub.GetCohortProcedureOccurrenceTable,
-        RequestCohortStream,
-        cohort_id=cohort_id
-    )
-
-  def get_cohort_visit_occurrence_table(self, cohort_id: int) -> Stream:
-    """
-    Get visit_occurrence table of a cohort.
-    Data stream connection will be opened.
-
-    :param int cohort_id:
-      ID of the cohort.
-
-    :return: Stream object.
-    :rtype: Stream
-    """
-    return Stream(
-        self.stub.GetCohortVisitOccurrenceTable,
-        RequestCohortStream,
-        cohort_id=cohort_id
+        self.stub.GetCohortTable,
+        RequestCohortTable,
+        lambda obj: self.__make_response(schema_info, obj),
+        cohort_id=cohort_id,
+        table_name=table_name,
     )
